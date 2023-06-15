@@ -6,43 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razas</title>
     <style>
-        #Titulo {
-            background-color: #364461;;
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #general{
+            position:absolute;
+            width: auto;
+        }
+        #header{
+            background-color: #364461;
             color: white;
+            width: 100%;
+            height: 60px;
+            float:left
         }
-        #Tabla {
-            background-color: #e3ba6a;;
-            color: black;
+        #main{
+            background-color: gray;
+            width: 100%;
+            height: 1000px;
+            float:left
         }
-        #menu {
-            background-color: lightgrey;;
-            color: black;
+        #menu{
+            background-color: burlywood;
+            width: 25%;
+            height: 1000px;
+            float:left
+        }
+        #footer{
+        background-color: #364461;
+            color: white;
+            width: 100%;
+            height: 60px;
+            float:left
+        }
+        #table{
+            color: white;
+            background-color: chocolate;
         }
     </style>
 </head>
 <body>
-    <div id="Titulo"><h1>Razas de perros</h1></div>
-    <div id="menu">
-        <h3>Menu</h3>
-        <ul>
-            <li><a href="Mascotas.html">Mascotas</a> </li>
-            <li><a href="Primerpagina.html">Inicio</a></li>
-            <li><a href="Ventajas.html">Ventajas</a></li>
-        </ul>
-    </div>
-    <div id="Tabla">
-        <table>
-            <tr>
-                <td>Husky.</td>
-                <td>Golden retriever.</td>
-                <td>Bulldog.</td>
-            </tr>
-        </table>
-    </div>
-    <div id="imagenes">
-        <img src="Imagenes/Husky.jpg" alt="Husky" width="250" height="300">
-        <img src="Imagenes/golden-retriever-.jpg" alt="Golden retriever" width="250" height="300">
-        <img src="Imagenes/english-bulldog-pants.png" alt="Bulldog" width="250" height="300">
+    <div id="general">
+        <div id="header">
+            <h1>Razas de perros</h1>
+        </div>
+        <div id="main">
+            <div id="menu">
+                <div id="Subtitulo">
+                    <h2>Menu</h2>
+                </div>
+                <ul>
+                    <li id="Link1"><a href="Primerpagina.html">Inicio</a></li>
+                    <li id="Link2"><a href="Mascotas.html">Mascotas</a></li>
+                    <li id="Link3"><a href="Razas.html">Razas de perros</a></li>
+                    <li id="Link4"><a href="Ventajas.html">Ventajas</a></li>
+                </ul>
+            </div>
+            <div id="table">
+                <table>
+                    <tr>
+                        <td>Husky.</td>
+                        <td>Golden retriever.</td>
+                        <td>Bulldog.</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="imagen1">
+                <img src="Imagenes/Husky.jpg" alt="Husky" width="250" height="300">
+            </div>
+            <div id="imagen2">
+                <img src="Imagenes/golden-retriever-.jpg" alt="Golden retriever" width="250" height="300">
+            </div>
+            <div id="imagen3">
+                <img src="Imagenes/english-bulldog-pants.png" alt="Bulldog" width="250" height="300">
+            </div>
+        </div>
+        <div id="footer">
+    
+        </div>
     </div>
 </body>
 </html>
+

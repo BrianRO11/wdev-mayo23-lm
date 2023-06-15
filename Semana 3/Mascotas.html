@@ -3,39 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
     <title>Mascotas</title>
     <style>
-    #Titulo {
-        background-color: #364461;;
-        color: white;
-    }
-    #Parrafo {
-        background-color: #e3ba6a;;
-        color: black;
-    }
-    #menu {
-        background-color: lightgrey;;
-        color: black;
-    }
-</style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #general{
+            position:absolute;
+            width: auto;
+        }
+        #header{
+            background-color: #364461;
+            color: white;
+            width: 100%;
+            height: 60px;
+            float:left
+        }
+        #main{
+            background-color: gray;
+            width: 100%;
+            height: 620px;
+            float:left
+        }
+        #menu{
+            background-color: burlywood;
+            width: 25%;
+            height: 620px;
+            float:left
+        }
+        #footer{
+        background-color: #364461;
+            color: white;
+            width: 100%;
+            height: 60px;
+            float:left
+        }
+    </style>
 </head>
 <body>
-    <div id="Titulo"><h1>Mascotas</h1></div>
-    <div id="Subtitulo"><h3>Menu</h3></div>
-    <div id="menu">
-        <ul>
-            <li><a href="Primerpagina.html">Inicio</a> </li>
-            <li><a href="Razas.html">Razas de perros</a></li>
-            <li><a href="Ventajas.html">Ventajas</a></li>
-        </ul>
-    </div>
-    <div id="Parrafo">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis incidunt consectetur dolorum sed repellat voluptatem quidem. Excepturi, minima inventore facilis dolores, qui libero, cumque aliquid ut eveniet iusto sunt quas. </p>
-    </div>
-    <div id="imagenes">
-        <img src="Imagenes/Perrito.gif" alt="Perro blanco" height="200px" width="300px">
-        <img src="Imagenes/Mocca.jpg" alt="Perro feliz" height="200px" width="300px">
+    <div id="general">
+        <div id="header">
+            <h1>Mascotas</h1>
+        </div>
+        <div id="main">
+            <div id="menu">
+                <div id="Subtitulo">
+                    <h2>Menu</h2>
+                </div>
+                <ul>
+                    <li id="Link1"><a href="Primerpagina.html">Inicio</a></li>
+                    <li id="Link2"><a href="Mascotas.html">Mascotas</a></li>
+                    <li id="Link3"><a href="Razas.html">Razas de perros</a></li>
+                    <li id="Link4"><a href="Ventajas.html">Ventajas</a></li>
+                </ul>
+            </div>
+        <div id="Parrafo">
+            <p>Las mascotas son grandes compañeras para todas las personas, nos hacen más felices: a niños, adultos y a las personas mayores. Además de ser muy fácil encariñarse con ellas, acabamos sintiéndolos como un miembro más de nuestra familia, hasta el punto de estar muy pendientes de su bienestar y felicidad. </p>
+        </div>
+        <div id="imagen1">
+            <img src="Imagenes/Perrito.gif" alt="Perro blanco" height="200px" width="300px">
+        </div>
+        <div id="imagen2">
+            <img src="Imagenes/Mocca.jpg" alt="Perro feliz" height="200px" width="300px">
+        </div>
+        </div>
+        <div id="footer">
+
+        </div>
     </div>
 </body>
 </html>
