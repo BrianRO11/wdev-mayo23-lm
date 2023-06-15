@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Espacio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .general{
+            position:absolute;
+            width: auto;
+        }
+        .header{
+            width: 100%;
+            height: 80px;
+            float:left
+        }
+        .main{
+            width: 100%;
+            height: 620px;
+            float:left
+        }
+        .menu{
+            width: 25%;
+            height: 620px;
+            float:left
+        }
+        .dashboard{
+            width: 75%;
+            height: 620px;
+            float:left
+        }
+        .footer{
+            width: 100%;
+            height: 30px;
+            float:left
+        }
+        .textogrande {
+            font-size: 20px;
+        }
+        .texto {
+            font-weight: bold;
+            font-size: x-large;
+        }
+        .fondogris{
+            background-color: lightslategray;
+        }
+        .fondoazul{
+            background-color: darkblue;
+        }
+        .letrablanca{
+            color: white;
+        }
+        .border{
+            border-style: solid;
+            border-color: white;
+        }
+        .body{
+            background-image: url(Imagenes/ColorfullGalaxy.jpg);
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="general">
+        <div class="header fondoazul textogrande letrablanca">
+            <h1>El Espacio Exterior </h1>
+        </div>
+        <div class="main">
+            <div class="menu letrablanca">
+                <ul>
+                    <li class="border"><a href="planetas.html" style="color: white;">Planetas</a></li>
+                    <li class="border"><a href="Galaxias.html" style="color: white;" >Galaxias</a></li>
+                    <li class="border"><a href="estrellas.html" style="color: white;">Estrellas</a></li>
+                    <li class="border"><a href="Blackhole.html" style="color: white;">Hoyos Negros</a></li>
+                </ul>
+            </div>
+            <div class="dashboard letrablanca texto">
+                <p>Desde nuestra perspectiva terrestre, el espacio exterior es todo lo que se encuentra fuera del límite que separa la Tierra del espacio.</p>
+            </div> 
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/BoYpQrZcC3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>Pie de pagina</h2>
+        </div>
+    </div>
+</body>
+</html>
