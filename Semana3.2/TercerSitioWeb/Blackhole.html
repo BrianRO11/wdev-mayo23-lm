@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoyosNegros</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .general{
+            position:absolute;
+            width: auto;
+        }
+        .header{
+            width: 100%;
+            height: 80px;
+            float:left
+        }
+        .main{
+            width: 100%;
+            height: 620px;
+            float:left
+        }
+        .menu{
+            width: 20%;
+            height: 620px;
+            float:left
+        }
+        .dashboard{
+            width: 80%;
+            height: 620px;
+            float:left
+        }
+        .footer{
+            width: 100%;
+            height: 30px;
+            float:left
+        }
+        .textogrande {
+            font-size: 20px;
+        }
+        .fuente {
+            font-weight: bold;
+            font-size: x-large;
+        }
+        .letrablanca{
+            color: white;
+        }
+        .fondocolor{
+            background-color: rgb(3, 13, 29);
+        }
+        .border{
+            border-style: solid;
+            border-color: white;
+            border-width: thin;
+            border-radius: 10px;
+        }
+        .body{
+            background-image: url(Imagenes/simulated_bh.jpg);
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="general">
+        <div class="header fondocolor textogrande letrablanca">
+            <h1>Los Hoyos Negros</h1>
+        </div>
+        <div class="main">
+            <div class="menu letrablanca">
+                <ul>
+                    <li class="border"><a href="Inicio.html" style="color: white;">Inicio</a></li>
+                    <li class="border"><a href="planetas.html" style="color: white;">Planetas</a></li>
+                    <li class="border"><a href="Galaxias.html" style="color: white;" >Galaxias</a></li>
+                    <li class="border"><a href="estrellas.html" style="color: white;">Estrellas</a></li>
+                    <li class="border"><a href="Blackhole.html" style="color: white;">Hoyos Negros</a></li>
+                </ul>
+            </div>
+            <div class="dashboard letrablanca fuente">
+                <p> Los agujeros negros son los restos fríos de antiguas estrellas, tan densas que ninguna partícula material, ni siquiera la luz, es capaz de escapar a su poderosa fuerza gravitatoria. </p>
+                <div class="dashboard"><iframe width="560" height="315" src="https://www.youtube.com/embed/e-P5IFTqB98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div>
+            </div> 
+        </div>
+        <div class="footer">
+            <h2></h2>
+        </div>
+    </div>
+</body>
+</html>
