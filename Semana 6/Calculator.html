@@ -1,97 +1,91 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-  <title>Calculator</title>
-  <style>
-    .container {
-      width: 200px;
-      margin: 0 auto;
-    }
-    .button {
-      width: 50px;
-      height: 50px;
-      font-size: 20px;
-    }
-  </style>
+  <title>Calculadora</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 </head>
+
 <body>
-  <div class="container">
-    <input type="text" id="result" readonly>
-    <br>
-    <button class="button" onclick="appendNumber(7)">7</button>
-    <button class="button" onclick="appendNumber(8)">8</button>
-    <button class="button" onclick="appendNumber(9)">9</button>
-    <button class="button" onclick="appendOperator('+')">+</button>
-    <br>
-    <button class="button" onclick="appendNumber(4)">4</button>
-    <button class="button" onclick="appendNumber(5)">5</button>
-    <button class="button" onclick="appendNumber(6)">6</button>
-    <button class="button" onclick="appendOperator('-')">-</button>
-    <br>
-    <button class="button" onclick="appendNumber(1)">1</button>
-    <button class="button" onclick="appendNumber(2)">2</button>
-    <button class="button" onclick="appendNumber(3)">3</button>
-    <button class="button" onclick="appendOperator('*')">*</button>
-    <br>
-    <button class="button" onclick="appendNumber(0)">0</button>
-    <button class="button" onclick="clearResult()">C</button>
-    <button class="button" onclick="calculate()">=</button>
-    <button class="button" onclick="appendOperator('/')">/</button>
-  </div>
+  <header>
+    <h1 class="display-3 text-center text-uppercase fw-bold">Calculadora</h1>
+    <hr>
+  </header>
+  <main>
+    <div class="container">
+      <form action="">
+        <div class="mb-3">
+          <label for="" class="form-label">Dato 1</label>
+          <input type="number"
+            class="form-control" name="numero1" id="numero1" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Solo ingresar numeros</small>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Dato 2</label>
+          <input type="number"
+            class="form-control" name="numero2" id="numero2" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Solo ingresar numeros</small>
+        </div>
+        <a name="" id="" class="btn btn-success" href="#" role="button" onclick="sumar()">Sumar</a>
+        <a name="" id="" class="btn btn-success" href="#" role="button" onclick="restar()">Restar</a>
+        <a name="" id="" class="btn btn-success" href="#" role="button" onclick="multiplicar()">Multiplicar</a>
+        <a name="" id="" class="btn btn-success" href="#" role="button" onclick="dividir()">Dividir</a>
 
-  <script>
-    let resultField = document.getElementById('result');
-    let operand1 = null;
-    let operand2 = null;
-    let operator = null;
-
-    // Function to append a number to the result field
-    function appendNumber(number) {
-      resultField.value += number;
-    }
-
-    // Function to append an operator to the result field
-    function appendOperator(op) {
-      operator = op;
-      operand1 = parseFloat(resultField.value);
-      resultField.value = '';
-    }
-
-    // Function to clear the result field
-    function clearResult() {
-      resultField.value = '';
-      operand1 = null;
-      operand2 = null;
-      operator = null;
-    }
-
-    // Function to perform the calculation
-    function calculate() {
-      operand2 = parseFloat(resultField.value);
-      let result;
-
-      switch (operator) {
-        case '+':
-          result = operand1 + operand2;
-          break;
-        case '-':
-          result = operand1 - operand2;
-          break;
-        case '*':
-          result = operand1 * operand2;
-          break;
-        case '/':
-          result = operand1 / operand2;
-          break;
-        default:
-          result = 'Error: Invalid operator';
-      }
-
-      resultField.value = result;
-      operand1 = result;
-      operand2 = null;
-      operator = null;
-    }
+      </form>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <div>
+    <script>
+      function sumar(){
+        var dato1 = Number(document.getElementById("numero1").value);
+        var dato2 = Number(document.getElementById("numero2").value);
+        var resultadosuma = dato1 + dato2;
+        var mensajetext = "Al sumar los numeros da como resultado: " + resultadosuma;
+        alert(mensajetext);
+      }
+      function restar(){
+        var dato1 = Number(document.getElementById("numero1").value);
+        var dato2 = Number(document.getElementById("numero2").value);
+        var resultadoresta = dato1 - dato2;
+        var mensajetext = "Al restar los numeros da como resultado: " + resultadoresta;
+        alert(mensajetext);
+      }
+      function multiplicar(){
+        var dato1 = Number(document.getElementById("numero1").value);
+        var dato2 = Number(document.getElementById("numero2").value);
+        var resultadomulti = dato1 * dato2;
+        var mensajetext = "Al multiplicar los numeros da como resultado: " + resultadomulti;
+        alert(mensajetext);
+      }
+      function dividir(){
+        var dato1 = Number(document.getElementById("numero1").value);
+        var dato2 = Number(document.getElementById("numero2").value);
+        var resultadodivision = dato1 / dato2;
+        var mensajetext = "Al dividir los numeros da como resultado: " + resultadodivision;
+        alert(mensajetext);
+      }
+    </script>
+  </div>
 </body>
+
 </html>
+ 
