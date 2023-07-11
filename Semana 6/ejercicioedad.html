@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Formulario Texto</title>
+  <title>Verificar edad</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +26,7 @@
                     class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="">
                 <small id="helpId" class="form-text text-muted">Debe de ser mayor a 65 años</small>
             </div>
-            <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarmensajehtml()">Escribiendo en el html</a>
+            <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarmensajehtml()">Verificar edad</a>
             <div>
                 <span id="soyresultado">---</span>
             </div>
@@ -47,27 +47,31 @@
 
   <script>
 
-    //INCORRECTO
-    a = 19;
-    b = 65;
-    var resultado = a>b;
+    //INCOMPLETO
+
+    function ejercicio(){
+      var dato1= Number(document.getElementById("edad").value);
+      var b = 65
+
+    }
+    if( ejercicio > b){
+        //si se cumple la condicion (true)
+        alert("Persona es mayor a 65 años");
+    }
+    else{
+        //cuando no se cumple (false)
+        alert("Persona es menor a 65 años");
+    }
+
 
     function mostrarmensajehtml(){
-        edad = Number(document.getElementById("edad").value);
-        document.getElementById("soyresultado").innerHTML = edad;
+        resultado = Number(document.getElementById("edad").value);
+        document.getElementById("soyresultado").innerHTML = resultado;
     }
 
-
-    if(a>b){
-        //si se cumple la condicion (true)
-        alert("Persona es mayor a 65 años" + mostrarmensajehtml);
-    }else{
-        //cuando no se cumple (false)
-        alert("Persona es menor a 65 años")
-    }
 
 
 
 
   </script>
-
+</body>
