@@ -27,7 +27,7 @@ function ajustardatostabla(datos){
     //    console.log(objetoindividual.usuario);
     //    console.log("///////////");
 
-       tablaresultado.innerHTML += `
+        tablaresultado.innerHTML += `
             <tr class="table-primary" >
                                 <td scope="row">${objetoindividual.id}</td>
                                 <td>${objetoindividual.nombre}</td>
