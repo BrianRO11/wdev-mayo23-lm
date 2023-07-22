@@ -49,12 +49,15 @@
 
     //INCOMPLETO
 
-    function ejercicio(){
-      var dato1= Number(document.getElementById("edad").value);
-      var b = 65
 
-    }
-    if( ejercicio > b){
+
+
+    function mostrarmensajehtml(){
+      var dato1= Number(document.getElementById("edad").value);
+      var limite = 65
+
+    
+    if( dato1 > limite){
         //si se cumple la condicion (true)
         alert("Persona es mayor a 65 años");
     }
@@ -62,11 +65,8 @@
         //cuando no se cumple (false)
         alert("Persona es menor a 65 años");
     }
-
-
-    function mostrarmensajehtml(){
-        resultado = Number(document.getElementById("edad").value);
+        resultado = Number(document.getElementById("ejercicio").value);
         document.getElementById("soyresultado").innerHTML = resultado;
-    }
+      }
   </script>
 </body>
