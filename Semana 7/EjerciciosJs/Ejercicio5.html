@@ -15,7 +15,8 @@
 
 <body>
   <header>
-    <!-- place navbar here -->
+    <h1 class="display-5 text-center text-uppercase fw-bold">Ejercicio 5</h1>
+    <hr>
   </header>
   <main>
     <div class="container">
@@ -27,25 +28,27 @@
             <small id="helpId" class="form-text text-muted">Ingrese su nombre</small>
           </div>
           <label for="" class="form-label">Genero</label>
+
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="hombre">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="hombre">
+            <label class="form-check-label" for="flexRadioDefault1">
               Hombre
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="mujer" checked>
-            <label class="form-check-label" for="flexCheckChecked">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="mujer" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
               Mujer
             </label>
           </div>
+          <small id="helpId" class="form-text text-muted">Ingrese su genero</small>
           <div class="mb-3">
             <label for="" class="form-label">Edad</label>
             <input type="number"
               class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="">
-            <small id="helpId" class="form-text text-muted">ingrese su edad</small>
+            <small id="helpId" class="form-text text-muted">Ingrese su edad</small>
           </div>
-          <a name="" id="" class="btn btn-success" href="#" role="button" onclick="ejercicio3()">Respuesta</a>
+          <a name="" id="" class="btn btn-success" href="#" role="button" onclick="ejercicio5()">Respuesta</a>
         </form>
       </div>
   </main>
@@ -59,6 +62,25 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script>
+    function ejercicio5(){
+      var hombre = document.getElementById("hombre").value;
+      var mujer = document.getElementById("mujer").value;
+      var edad = Number(document.getElementById("edad").value);
+      var nombre = document.getElementById("nombre").value;
+      var mensaje = "";
+
+      if ("hombre" && edad > 65){
+        alert(nombre + " usted se puede pensionar")
+      }
+      else if ("mujer" && edad > 62){
+        alert(nombre + " usted se puede pensionar")
+      }
+      else {
+        alert(nombre + " aun no se puede pensionar")
+      }
+    }
   </script>
 </body>
 
