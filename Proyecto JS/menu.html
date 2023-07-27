@@ -15,34 +15,40 @@
 
 <body>
   <header>
-    <!-- place navbar here -->
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="navId" role="tablist">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link active" data-bs-toggle="tab" aria-current="page">Home</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a href="#tab5Id" class="nav-link" data-bs-toggle="tab">Another link</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a href="#tab5Id" class="nav-link" data-bs-toggle="tab">Another link</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a href="#tab5Id" class="nav-link" data-bs-toggle="tab">Another link</a>
+      </li>
+    </ul>
+    
+    <!-- Tab panes -->
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+      <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+      <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+      <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+      <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+    </div>
+    
+    <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
+    <script>
+      var triggerEl = document.querySelector('#navId a')
+      bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+    </script>
+    
   </header>
   <main>
-    <nav class="navbar navbar-expand-xxl navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="https://paginas-web-cr.com/ApiPHP" target="_blank" aria-current="page">Api <span class="visually-hidden">(current)</span></a>
-                </li>                
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="listarcurso.html">Listar Curso</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+
   </main>
   <footer>
     <!-- place footer here -->
