@@ -3,7 +3,7 @@ var apiconsultar = "ListaCurso.php";
 var apieliminar = "BorrarCursos.php";
 
 const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
-
+const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'));
 
 let tablaresultado = document.querySelector('#tablaresultado');
 
@@ -32,6 +32,8 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.tiempo}</td>
                                 <td>${objetoindividual.usuario}</td>
                                 <td>
+                                    <a name="Editar" id="Editar" class="btn btn-secondary" role="button" onclick="MostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}', '${objetoindividual.descripcion}', '${objetoindividual.tiempo}')">Editar</a>
+                                    ||
                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
             </tr>
@@ -73,5 +75,11 @@ function ajustardatostabla(datos){
         consultardatos();
         
     }
+    function MostrarEditarModal(id, nombre, descripcion, tiempo){
+        console.log(id, nombre, descripcion, tiempo);
+        myModalEditar.show();
+    }
+
+    
 
 consultardatos();
