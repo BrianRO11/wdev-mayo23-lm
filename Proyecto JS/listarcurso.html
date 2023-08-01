@@ -77,10 +77,36 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Editando
+                <form id="formulario">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Id</label>
+                        <input required type="text" disabled
+                          class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Id</small>
+                      </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Nombre</label>
+                      <input required type="text"
+                        class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingresa el nombre">
+                      <small id="helpId" class="form-text text-muted">Nombre</small>
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Descripcion</label>
+                      <input required type="text"
+                        class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Descripcion">
+                      <small id="helpId" class="form-text text-muted">Descripcion</small>
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Tiempo</label>
+                      <input required type="text"
+                        class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Ingresa tiempo">
+                      <small id="helpId" class="form-text text-muted">Tiempo</small>
+                   </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
             </div>
         </div>
     </div>

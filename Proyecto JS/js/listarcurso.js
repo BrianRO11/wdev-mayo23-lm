@@ -77,9 +77,16 @@ function ajustardatostabla(datos){
     }
     function MostrarEditarModal(id, nombre, descripcion, tiempo){
         console.log(id, nombre, descripcion, tiempo);
+        document.getElementById('id').value = id;
+        document.getElementById('nombre').value = nombre;
+        document.getElementById('descripcion').value = descripcion;
+        document.getElementById('tiempo').value = tiempo;
         myModalEditar.show();
     }
 
-    
+
+    //crear una funcion parecida  a la de submit
+    //cambiar el metodo de insertar por el de editar
+    //crear una funcion similar a completeDelete
 
 consultardatos();
