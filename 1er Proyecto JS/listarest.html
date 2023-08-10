@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Listar Estudiantes</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <div id="menuprincipal">
+       
+            </div>
+        </header>
+        <main>
+            <a name="" id="" class="btn btn-primary" href="crearest.html" role="button">Agregar</a>
+             <div class="table-responsive">
+                <table class="table table-striped table-hover	table-borderless table-black align-middle">
+                    <thead class="table-light">
+                        <caption>Lista de datos</caption>
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellido paterno</th>
+                            <th>Apellido materno</th>
+                            <th>Nacionalidad</th>
+                            <th>Cedula</th>
+                            <th>Correo</th>
+                            <th>Telefono</th>
+                            <th>Celular</th>
+                            <th>Fechanacimiento</th>
+                            <th>Sexo</th>
+                            <th>Direccion</th>
+                            <th>Usuario</th>
+                            <th>Acciones</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-group-divider" id="tablaresultado">
+                            
+                         
+                        </tbody>
+                        <tfoot>
+                            
+                        </tfoot>
+                </table>
+            </div>
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalSuccess" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTitleId">Modal Complete Success</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Actualizacion exitosa
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Modal Eliminar -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div class="modal fade" id="myModalEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">Eliminando registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Eliminado
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalEditar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">Editar registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formulario">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nombre</label>
+                        <input required type="text"
+                            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingresa su Nombre">
+                        <small id="helpId" class="form-text text-muted">Nombre</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Apellido paterno</label>
+                        <input required type="text"
+                            class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="Ingresa su Apellido paterno">
+                        <small id="helpId" class="form-text text-muted">Apellido paterno</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Apellido materno</label>
+                        <input required type="text"
+                            class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="Ingresa su Apellido materno">
+                        <small id="helpId" class="form-text text-muted">Apellido materno</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nacionalidad</label>
+                        <input required type="text"
+                            class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Ingresa su Nacionalidad">
+                        <small id="helpId" class="form-text text-muted">Nacionalidad</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Cedula</label>
+                        <input required type="number"
+                        class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Ingresa su cedula">
+                        <small id="helpId" class="form-text text-muted">Cedula</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Correo Electronico</label>
+                        <input required type="email"
+                            class="form-control" name="correo" id="correo" aria-describedby="helpId" placeholder="Ingresa su Correo Electronico">
+                        <small id="helpId" class="form-text text-muted">Correo Electronico</small>
+                    </div>
+                    <div class="mb-3">
+                    <label for="" class="form-label">Telefono</label>
+                    <input required type="number"
+                        class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="Descripcion">
+                    <small id="helpId" class="form-text text-muted">Telefono</small>
+                    </div>
+                    <div class="mb-3">
+                    <label for="" class="form-label">Telefono celular</label>
+                    <input required type="number"
+                        class="form-control" name="celular" id="celular" aria-describedby="helpId" placeholder="Ingresa Telefono celular">
+                    <small id="helpId" class="form-text text-muted">Telefono celular</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Fecha de nacimiento</label>
+                        <input required type="date"
+                            class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="Ingresa su Fecha de nacimiento">
+                        <small id="helpId" class="form-text text-muted">Fecha de nacimiento</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Sexo</label>
+                        <input required type="text"
+                            class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="Ingresa su Sexo ">
+                        <small id="helpId" class="form-text text-muted">Sexo</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Direccion</label>
+                        <input required type="text"
+                            class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="Ingresa su direccion completa">
+                        <small id="helpId" class="form-text text-muted">Direccion</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+    </div>
+
+  <script src="js/menu.js"></script>
+  
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script src="js/listarest.js"></script>
+</body>
+
+</html>
