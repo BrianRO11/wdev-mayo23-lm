@@ -7,10 +7,6 @@ var apicrear = "InsertarEstudiantes.php";
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
     var datosEnviar = {
-        "nombre":document.getElementById('nombre').value ,
-        "apellidopaterno":document.getElementById('apellidopaterno').value ,
-        "apellidomaterno":document.getElementById('apellidomaterno').value ,
-        "nacionalidad":document.getElementById('nacionalidad').value ,
         "cedula":document.getElementById('cedula').value ,
         "correo":document.getElementById('correo').value ,
         "telefono":document.getElementById('telefono').value ,
@@ -18,6 +14,11 @@ formulario.addEventListener('submit', function(e){
         "fechanacimiento":document.getElementById('fechanacimiento').value ,
         "sexo":document.getElementById('sexo').value ,
         "direccion":document.getElementById('direccion').value ,
+        "nombre":document.getElementById('nombre').value ,
+        "apellidopaterno":document.getElementById('apellidopaterno').value ,
+        "apellidomaterno":document.getElementById('apellidomaterno').value ,
+        "nacionalidad":document.getElementById('nacionalidad').value ,
+
         "usuario":"Brian Rivas"
     }
 

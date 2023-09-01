@@ -29,10 +29,6 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Apellido paterno</th>
-                            <th>Apellido materno</th>
-                            <th>Nacionalidad</th>
                             <th>Cedula</th>
                             <th>Correo</th>
                             <th>Telefono</th>
@@ -40,6 +36,10 @@
                             <th>Fechanacimiento</th>
                             <th>Sexo</th>
                             <th>Direccion</th>
+                            <th>Nombre</th>
+                            <th>Apellido paterno</th>
+                            <th>Apellido materno</th>
+                            <th>Nacionalidad</th>
                             <th>Usuario</th>
                             <th>Acciones</th>
                         </tr>
@@ -100,29 +100,11 @@
             <div class="modal-body">
                 <form id="formulario">
                     <div class="mb-3">
-                        <label for="" class="form-label">Nombre</label>
-                        <input required type="text"
-                            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingresa su Nombre">
-                        <small id="helpId" class="form-text text-muted">Nombre</small>
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label">Apellido paterno</label>
-                        <input required type="text"
-                            class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="Ingresa su Apellido paterno">
-                        <small id="helpId" class="form-text text-muted">Apellido paterno</small>
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label">Apellido materno</label>
-                        <input required type="text"
-                            class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="Ingresa su Apellido materno">
-                        <small id="helpId" class="form-text text-muted">Apellido materno</small>
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label">Nacionalidad</label>
-                        <input required type="text"
-                            class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Ingresa su Nacionalidad">
-                        <small id="helpId" class="form-text text-muted">Nacionalidad</small>
-                    </div>
+                        <label for="" class="form-label">Id</label>
+                        <input required type="text" disabled
+                            class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Id</small>
+                    </div>                    
                     <div class="mb-3">
                         <label for="" class="form-label">Cedula</label>
                         <input required type="number"
@@ -164,6 +146,30 @@
                         <input required type="text"
                             class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="Ingresa su direccion completa">
                         <small id="helpId" class="form-text text-muted">Direccion</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nombre</label>
+                        <input required type="text"
+                            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingresa su Nombre">
+                        <small id="helpId" class="form-text text-muted">Nombre</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Apellido paterno</label>
+                        <input required type="text"
+                            class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="Ingresa su Apellido paterno">
+                        <small id="helpId" class="form-text text-muted">Apellido paterno</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Apellido materno</label>
+                        <input required type="text"
+                            class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="Ingresa su Apellido materno">
+                        <small id="helpId" class="form-text text-muted">Apellido materno</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nacionalidad</label>
+                        <input required type="text"
+                            class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Ingresa su Nacionalidad">
+                        <small id="helpId" class="form-text text-muted">Nacionalidad</small>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
