@@ -22,8 +22,8 @@
     });
 
     function suma(){
-        var dato1 = Number(document.getElementById("numero1").value);
-        var dato2 = Number(document.getElementById("numero2").value);
+        $(dato1).val(numero1);
+        $(dato2).val(numero2);
         var resultadosuma = dato1 + dato2;
         var mensajetext = "Al sumar los numeros da como resultado: " + resultadosuma;
         alert(mensajetext);
@@ -41,13 +41,13 @@
     <div class="mb-3">
         <label for="" class="form-label">Dato 1</label>
         <input type="text"
-            class="form-control" name="" id="dato1" aria-describedby="helpId" placeholder="">
+            class="form-control" name="" id="numero1" aria-describedby="helpId" placeholder="">
         <small id="helpId" class="form-text text-muted">Ingresar solo numeros</small>
     </div>
     <div class="mb-3">
         <label for="" class="form-label">Dato 2</label>
         <input type="text"
-            class="form-control" name="" id="dato2" aria-describedby="helpId" placeholder="">
+            class="form-control" name="" id="numero2" aria-describedby="helpId" placeholder="">
         <small id="helpId" class="form-text text-muted">Ingresar solo numeros</small>
     </div>
 
