@@ -1,16 +1,17 @@
-var formulario = document.getElementById('formulario');
-const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'));
+var formularioEst = document.getElementById('formularioEst');
+const modalSuccessEst = new bootstrap.Modal(document.getElementById('modalSuccessEst'));
 
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apicrear = "InsertarEstudiantes.php";
+var apicrearEst = "InsertarEstudiantes.php";
 
-formulario.addEventListener('submit', function(e){
+formularioEst.addEventListener('submit', function(e){
+
     e.preventDefault();
-    var datosEnviar = {
+    var datosCrearEst = {
         "cedula":document.getElementById('cedula').value ,
-        "correo":document.getElementById('correo').value ,
+        "correo":document.getElementById('correoelectronico').value ,
         "telefono":document.getElementById('telefono').value ,
-        "celular":document.getElementById('celular').value ,
+        "telefonocelular":document.getElementById('telefonocelular').value ,
         "fechanacimiento":document.getElementById('fechanacimiento').value ,
         "sexo":document.getElementById('sexo').value ,
         "direccion":document.getElementById('direccion').value ,
@@ -21,20 +22,24 @@ formulario.addEventListener('submit', function(e){
         "idCarreras":document.getElementById('idCarreras').value ,
         "usuario":"Brian Rivas"
     }
-    
-    apiurl = apibase + apicrear ;
+    apiurl = apibase + apicrearEst ;
     fetch(apiurl,
         {
             method:'POST',
-            body: JSON.stringify(datosEnviar)
+            body: JSON.stringify(datosCrearEst)
         })
     .then(estructura => estructura.json())
     .then((datosrespuesta) => {
+            modalSuccessEst.show()
             completeInsert()
         })
     .catch(console.log);
 
+    //console.log(datosEnviarEst);
+
 })
+
+
 function completeInsert(){
     window.location = 'listarest.html';
 }

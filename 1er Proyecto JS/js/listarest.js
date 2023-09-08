@@ -87,7 +87,7 @@ function ajustardatostabla(datos){
         
     }
 
-    function mostrarEditarModal(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, usuario ){
+    function mostrarEditarModal(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, idCarreras,usuario ){
         document.getElementById('id').value = id;
         document.getElementById('cedula').value = cedula;
         document.getElementById('correoelectronico').value = correoelectronico;
@@ -103,6 +103,7 @@ function ajustardatostabla(datos){
         document.getElementById('idCarreras').value = idCarreras;
         myModalEditarEst.show();
     }
+
 
 
 formulario.addEventListener('submit', function(e)
@@ -127,7 +128,7 @@ formulario.addEventListener('submit', function(e)
 
         "usuario":"Brian Rivas"
     }
-
+    
     apiurl = apibase + apieditar ;
     fetch(apiurl,
         {

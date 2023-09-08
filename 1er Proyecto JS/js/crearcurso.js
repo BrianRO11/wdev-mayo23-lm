@@ -28,7 +28,7 @@ formulario.addEventListener('submit', function(e)
         })
     .catch(console.log);
 
-   //
+
 });
 
 function completeInsert(){

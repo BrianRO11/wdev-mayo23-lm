@@ -4,8 +4,8 @@ var apieliminar = "BorrarProfesores.php";
 var apieditar = "ActualizarProfesores.php";
 
 const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
-const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'));
-const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'))
+const myModalEditarProf = new bootstrap.Modal(document.getElementById('myModalEditar'));
+const modalSuccessProf = new bootstrap.Modal(document.getElementById('modalSuccess'))
 
 let tablaresultado = document.querySelector('#tablaresultado');
 
@@ -40,9 +40,10 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.apellidopaterno}</td>
                                 <td>${objetoindividual.apellidomaterno}</td>
                                 <td>${objetoindividual.nacionalidad}</td>
+                                <td>${objetoindividual.idCarreras}</td>
                                 <td>${objetoindividual.usuario}</td>
                                 <td>
-                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.cedula}','${objetoindividual.correoelectronico}','${objetoindividual.telefono}','${objetoindividual.telefonocelular}','${objetoindividual.fechanacimiento}','${objetoindividual.sexo}','${objetoindividual.direccion}','${objetoindividual.nombre}','${objetoindividual.apellidopaterno}','${objetoindividual.apellidomaterno}','${objetoindividual.nacionalidad}')">Editar</a>
+                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.cedula}','${objetoindividual.correoelectronico}','${objetoindividual.telefono}','${objetoindividual.telefonocelular}','${objetoindividual.fechanacimiento}','${objetoindividual.sexo}','${objetoindividual.direccion}','${objetoindividual.nombre}','${objetoindividual.apellidopaterno}','${objetoindividual.apellidomaterno}','${objetoindividual.nacionalidad}','${objetoindividual.idCarreras}')">Editar</a>
                                     ||
                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
@@ -86,7 +87,7 @@ function ajustardatostabla(datos){
         
     }
 
-    function mostrarEditarModal(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, usuario ){
+    function mostrarEditarModal(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad,idCarreras, usuario ){
         document.getElementById('id').value = id;
         document.getElementById('cedula').value = cedula;
         document.getElementById('correoelectronico').value = correoelectronico;
@@ -99,8 +100,9 @@ function ajustardatostabla(datos){
         document.getElementById('apellidopaterno').value = apellidopaterno;
         document.getElementById('apellidomaterno').value = apellidomaterno;
         document.getElementById('nacionalidad').value = nacionalidad;
-        
-        myModalEditar.show();
+        document.getElementById('idCarreras').value = idCarreras;
+
+        myModalEditarProf.show();
     }
 
 
@@ -109,7 +111,7 @@ formulario.addEventListener('submit', function(e)
     e.preventDefault();
     //alert('salvadndo');
 
-    var datosEnviar = { 
+    var datosEnviarProf= { 
         "id":document.getElementById('id').value ,
         "cedula":document.getElementById('cedula').value ,
         "correoelectronico":document.getElementById('correoelectronico').value ,
@@ -122,6 +124,7 @@ formulario.addEventListener('submit', function(e)
         "apellidopaterno":document.getElementById('apellidopaterno').value ,
         "apellidomaterno":document.getElementById('apellidomaterno').value ,
         "nacionalidad":document.getElementById('nacionalidad').value ,
+        "idCarreras":document.getElementById('idCarreras').value ,
 
         "usuario":"Brian Rivas"
     }
@@ -130,12 +133,12 @@ formulario.addEventListener('submit', function(e)
     fetch(apiurl,
         {
             method:'POST',
-            body: JSON.stringify(datosEnviar)
+            body: JSON.stringify(datosEnviarProf)
         })
     .then(estructura => estructura.json())
     .then((datosrespuesta) => {
         //alert("Salvado")
-            modalSuccess.show()
+        modalSuccessProf.show()
             completeInsert()
         })
     .catch(console.log);
