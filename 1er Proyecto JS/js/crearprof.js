@@ -18,10 +18,10 @@ formulario.addEventListener('submit', function(e){
         "apellidopaterno":document.getElementById('apellidopaterno').value ,
         "apellidomaterno":document.getElementById('apellidomaterno').value ,
         "nacionalidad":document.getElementById('nacionalidad').value ,
-        "idCarreras":document.getElementById('idCarreras').value ,
+
         "usuario":"Brian Rivas"
     }
-    
+
     apiurl = apibase + apicrear ;
     fetch(apiurl,
         {
@@ -30,6 +30,7 @@ formulario.addEventListener('submit', function(e){
         })
     .then(estructura => estructura.json())
     .then((datosrespuesta) => {
+            modalSuccess.show()
             completeInsert()
         })
     .catch(console.log);

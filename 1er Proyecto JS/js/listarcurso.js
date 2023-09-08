@@ -108,9 +108,9 @@ formulario.addEventListener('submit', function(e)
         })
     .then(estructura => estructura.json())
     .then((datosrespuesta) => {
-        alert("Salvado")
-            // modalSuccess.show()
-             completeInsert()
+        //alert("Salvado")
+            modalSuccess.show()
+            completeInsert()
         })
     .catch(console.log);
 
@@ -121,10 +121,5 @@ function completeInsert(){
     
 }
 
-    //crear una funcion parecida a la del submit
-    //cambiar el metodo de insertar por el de editar
-    //crear una funcion similar a completeDelete
-
-    
 
 consultardatos();

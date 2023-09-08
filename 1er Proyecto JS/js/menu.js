@@ -22,9 +22,9 @@ menuprincipal.innerHTML += `
             </a>
             <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="listarest.html">Estudiante</a></li>
-            <li><a class="dropdown-item" href="#">Profesor</a></li>
-            <li><a class="dropdown-item" href="#">Grupo</a></li>
-            <li><a class="dropdown-item" href="#">Curso</a></li>
+            <li><a class="dropdown-item" href="listarprof.html">Profesor</a></li>
+            <li><a class="dropdown-item" href="listargrupo.html">Grupo</a></li>
+            <li><a class="dropdown-item" href="listarcurso.html">Curso</a></li>
             </ul>
         </li>
         </ul>
