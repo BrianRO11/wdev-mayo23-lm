@@ -31,15 +31,15 @@ formularioEst.addEventListener('submit', function(e){
     .then(estructura => estructura.json())
     .then((datosrespuesta) => {
             modalSuccessEst.show()
-            completeInsert()
+            completeInsertEst()
         })
     .catch(console.log);
 
-    //console.log(datosEnviarEst);
+    console.log(datosCrearEst);
 
 })
 
 
-function completeInsert(){
+function completeInsertEst(){
     window.location = 'listarest.html';
 }
