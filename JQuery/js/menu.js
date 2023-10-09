@@ -10,7 +10,7 @@ navBar.innerHTML +=
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
         <a class="nav-link" href="login.html">Login</a>
-        <a class="nav-link" href="courses.html">Cursos</a>
+        <a class="nav-link" href="Curso.html">Cursos</a>
         <a class="nav-link" href="https://paginas-web-cr.com/ApiPHP/" target="_blank">API</a>
     </div>
   </div>

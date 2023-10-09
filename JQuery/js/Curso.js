@@ -104,7 +104,7 @@ $("#crearCurso").submit(function (e) {
 
 function completeInsert () 
 {
-    window.location = "courses.html";
+    window.location = "Curso.html";
 }
 
 //--------------------------------------------------------FUNCION EDITAR CURSO ------------------------------------------------------

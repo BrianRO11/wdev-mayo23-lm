@@ -3,7 +3,7 @@ let urlCrear = "https://paginas-web-cr.com/ApiPHP/apis/InsertarEstudiantes.php";
 let ulrEditar = "https://paginas-web-cr.com/ApiPHP/apis/ActualizarEstudiantes.php";
 let urlBorrar = "https://paginas-web-cr.com/ApiPHP/apis/BorrarEstudiantes.php";
 
-let crearCurso = $("#crearCurso").val();
+let crearEstudiante = $("#crearEstudiante").val();
 
 const modalAgregarEstudiante = new bootstrap.Modal(document.getElementById('modalAgregarEstudiante'));
 const modalEliminarEstudiante = new bootstrap.Modal(document.getElementById('modalEliminarEstudiante'));
@@ -47,7 +47,7 @@ function ajustarDatos (datos) {
     for (const objetoIndividual of datos) 
 {
 
-tablaResultado.innerHTML +=
+    tablaResultado.innerHTML +=
 `
 <tr class="table-light" >
 <td scope="row">${objetoindividual.id}</td>
@@ -82,18 +82,26 @@ function mostrarModalAgregar()
 
 {
 
-modalAgregarCurso.show();
+    modalAgregarEstudiante.show();
 
 }
 
-$("#crearCurso").submit(function (e) { 
+$("#crearEstudiante").submit(function (e) { 
     e.preventDefault();
 
    let datosEnviar = 
     {
-    "nombre" : $('#nombreCrear').val(), 
-    "descripcion" : $('#descripcionCrear').val(), 
-    "tiempo" : $('#tiempoCrear').val(), 
+    "cedula" : $('#cedula').val(), 
+    "correoelectronico" : $('#correoelectronico').val(), 
+    "telefono" : $('#telefono').val(), 
+    "telefonocelular" : $('#telefonocelular').val(), 
+    "fechanacimiento" : $('#fechanacimiento').val(),
+    "direccion" : $('#direccion').val(),
+    "nombre" : $('#nombre').val(),
+    "apellidopaterno" : $('#apellidopaterno').val(),
+    "apellidomaterno" : $('#apellidomaterno').val(),
+    "nacionalidad" : $('#nacionalidad').val(),
+    "idCarreras" : $('#idCarreras').val(),
     "usuario" : "Brian Rivas",
     }
 
@@ -115,18 +123,29 @@ $("#crearCurso").submit(function (e) {
 
 function completeInsert () 
 {
-    window.location = "courses.html";
+    window.location = "Estudiantes.html";
 }
 
 //--------------------------------------------------------FUNCION EDITAR CURSO ------------------------------------------------------
 
-function editarEstudiante (id , nombre , descripcion , tiempo)
+function editarEstudiante (id , cedula , correoelectronico , telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, idCarreras)
 {
 
 $("#idEditar").val(id);
-$("#nombreEditar").val(nombre);
-$("#descripcionEditar").val(descripcion);
-$("#tiempoEditar").val(tiempo);
+$("#cedulaeditar").val(cedula);
+$("#correoelectronicoeditar").val(correoelectronico);
+$("#telefonoeditar").val(telefono);
+$("#telefonocelulareditar").val(telefonocelular);
+$("#fechanacimientoeditar").val(fechanacimiento);
+$("#sexoeditar").val(sexo);
+$("#direccioneditar").val(direccion);
+$("#nombreeditar").val(nombre);
+$("#apellidopaternoeditar").val(apellidopaterno);
+$("#apellidomaternoeditar").val(apellidomaterno);
+$("#nacionalidadeditar").val(nacionalidad);
+$("#idCarreraseditar").val(idCarreras);
+
+
 
 modalEditarEstudiante.show();
 }
@@ -136,11 +155,18 @@ $("#editarEstudianteForm").submit(function (e) {
 
     let datosEnviar = 
     {
-    "id" : $('#idEditar').val(), 
-    "nombre" : $('#nombreEditar').val(), 
-    "descripcion" : $('#descripcionEditar').val(), 
-    "tiempo" : $('#tiempoEditar').val(), 
-    "usuario" : "Brian Rivas",
+        "cedula" : $('#cedula').val(), 
+        "correoelectronico" : $('#correoelectronico').val(), 
+        "telefono" : $('#telefono').val(), 
+        "telefonocelular" : $('#telefonocelular').val(), 
+        "fechanacimiento" : $('#fechanacimiento').val(),
+        "direccion" : $('#direccion').val(),
+        "nombre" : $('#nombre').val(),
+        "apellidopaterno" : $('#apellidopaterno').val(),
+        "apellidomaterno" : $('#apellidomaterno').val(),
+        "nacionalidad" : $('#nacionalidad').val(),
+        "idCarreras" : $('#idCarreras').val(),
+        "usuario" : "Brian Rivas",
     }
 
     $.ajax({
