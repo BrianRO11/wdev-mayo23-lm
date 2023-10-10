@@ -9,8 +9,17 @@ navBar.innerHTML +=
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-        <a class="nav-link" href="login.html">Login</a>
-        <a class="nav-link" href="Curso.html">Cursos</a>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Módulos  
+        </a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="Estudiantes.html">Estudiante</a></li>
+        <li><a class="dropdown-item" href="Profesores.html">Profesor</a></li>
+        <li><a class="dropdown-item" href="Grupo.html">Grupo</a></li>
+        <li><a class="dropdown-item" href="Curso.html">Curso</a></li>
+        </ul>
+    </li>
         <a class="nav-link" href="https://paginas-web-cr.com/ApiPHP/" target="_blank">API</a>
     </div>
   </div>

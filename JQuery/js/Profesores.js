@@ -1,13 +1,13 @@
-let url = "https://paginas-web-cr.com/ApiPHP/apis/ListaEstudiantes.php";    
-let urlCrear = "https://paginas-web-cr.com/ApiPHP/apis/InsertarEstudiantes.php";
-let ulrEditar = "https://paginas-web-cr.com/ApiPHP/apis/ActualizarEstudiantes.php";
-let urlBorrar = "https://paginas-web-cr.com/ApiPHP/apis/BorrarEstudiantes.php";
+let url = "https://paginas-web-cr.com/ApiPHP/apis/ListaProfesores.php";    
+let urlCrear = "https://paginas-web-cr.com/ApiPHP/apis/InsertarProfesores.php";
+let ulrEditar = "https://paginas-web-cr.com/ApiPHP/apis/ActualizarProfesores.php";
+let urlBorrar = "https://paginas-web-cr.com/ApiPHP/apis/BorrarProfesores.php";
 
-let crearEstudiante = $("#crearEstudiante").val();
+let crearProfesor = $("#crearProfesor").val();
 
-const modalAgregarEstudiante = new bootstrap.Modal(document.getElementById('modalAgregarEstudiante'));
-const modalEliminarEstudiante = new bootstrap.Modal(document.getElementById('modalEliminarEstudiante'));
-const modalEditarEstudiante = new bootstrap.Modal(document.getElementById('modalEditarEstudiante'))
+const modalAgregarProfesor = new bootstrap.Modal(document.getElementById('modalAgregarProfesor'));
+const modalEliminarProfesor = new bootstrap.Modal(document.getElementById('modalEliminarProfesor'));
+const modalEditarProfesor = new bootstrap.Modal(document.getElementById('modalEditarProfesor'))
 const editCompleto = new bootstrap.Modal(document.getElementById('editCompleto'))
 
 
@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
     $("#borrarCurso").click(function (e) { 
         e.preventDefault();
-        eliminarEstudiante();
+        eliminarProfesor();
     });
 });
 
@@ -62,13 +62,13 @@ function ajustarDatos (datos) {
 <td>${valor.nombre}</td>
 <td>${valor.apellidopaterno}</td>
 <td>${valor.apellidomaterno}</td>
-<td>${valor.nacionalidad}</td>
 <td>${valor.idCarreras}</td>
 <td>${valor.usuario}</td>
+<td>${valor.nacionalidad}</td>
 <td>
-    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="editarEstudiante('${valor.id}','${valor.cedula}','${valor.correoelectronico}','${valor.telefono}','${valor.telefonocelular}','${valor.fechanacimiento}','${valor.sexo}','${valor.direccion}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}','${valor.nacionalidad}','${valor.idCarreras}')">Editar</a>
+    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="editarProfesor('${valor.id}','${valor.cedula}','${valor.correoelectronico}','${valor.telefono}','${valor.telefonocelular}','${valor.fechanacimiento}','${valor.sexo}','${valor.direccion}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}','${valor.idCarreras}','${valor.nacionalidad}')">Editar</a>
     ||
-    <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="eliminarEstudiante('${valor.id}')">Eliminar</a>
+    <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="eliminarProfesor('${valor.id}')">Eliminar</a>
 
 </td>
 </tr>
@@ -83,11 +83,11 @@ function mostrarModalAgregar()
 
 {
 
-    modalAgregarEstudiante.show();
+    modalAgregarProfesor.show();
 
 }
 
-$("#crearEstudiante").submit(function (e) { 
+$("#crearProfesor").submit(function (e) { 
     e.preventDefault();
 
    let datosEnviar = 
@@ -101,8 +101,8 @@ $("#crearEstudiante").submit(function (e) {
     "nombre" : $('#nombre').val(),
     "apellidopaterno" : $('#apellidopaterno').val(),
     "apellidomaterno" : $('#apellidomaterno').val(),
-    "nacionalidad" : $('#nacionalidad').val(),
     "idCarreras" : $('#idCarreras').val(),
+    "nacionalidad" : $('#nacionalidad').val(),
     "usuario" : "Brian Rivas",
     }
 
@@ -124,12 +124,12 @@ $("#crearEstudiante").submit(function (e) {
 
 function completeInsert () 
 {
-    window.location = "Estudiantes.html";
+    window.location = "Profesores.html";
 }
 
-//--------------------------------------------------------FUNCION EDITAR CURSO ------------------------------------------------------
+//Funcion Editar
 
-function editarEstudiante (id , cedula , correoelectronico , telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, idCarreras)
+function editarProfesor (id , cedula , correoelectronico , telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, idCarreras)
 {
 
 $("#idEditar").val(id);
@@ -143,15 +143,15 @@ $("#direccioneditar").val(direccion);
 $("#nombreeditar").val(nombre);
 $("#apellidopaternoeditar").val(apellidopaterno);
 $("#apellidomaternoeditar").val(apellidomaterno);
-$("#nacionalidadeditar").val(nacionalidad);
 $("#idCarreraseditar").val(idCarreras);
+$("#nacionalidadeditar").val(nacionalidad);
 
 
 
-modalEditarEstudiante.show();
+modalEditarProfesor.show();
 }
 
-$("#editarEstudianteForm").submit(function (e) { 
+$("#editarProfesorForm").submit(function (e) { 
     e.preventDefault();
 
     let datosEnviar = 
@@ -165,8 +165,8 @@ $("#editarEstudianteForm").submit(function (e) {
         "nombre" : $('#nombre').val(),
         "apellidopaterno" : $('#apellidopaterno').val(),
         "apellidomaterno" : $('#apellidomaterno').val(),
-        "nacionalidad" : $('#nacionalidad').val(),
         "idCarreras" : $('#idCarreras').val(),
+        "nacionalidad" : $('#nacionalidad').val(),
         "usuario" : "Brian Rivas",
     }
 
@@ -176,16 +176,17 @@ $("#editarEstudianteForm").submit(function (e) {
         data: JSON.stringify(datosEnviar),
         dataType: "json",
         success: function (response) {
-            modalEditarEstudiante.hide();
+            modalEditarProfesor.hide();
             editCompleto.show();
             RecargarTabla();
         }
     });
     
 });
+
 // Funcion eliminar
 
-function eliminarEstudiante(id) 
+function eliminarProfesor(id) 
 {
     var datosEnviar = {"id":id}
 
@@ -195,7 +196,7 @@ $.ajax({
     data: JSON.stringify(datosEnviar),
     dataType: "json",
     success: function (response) {
-        modalEliminarEstudiante.show();
+        modalEliminarProfesor.show();
         RecargarTabla();
     }
 });

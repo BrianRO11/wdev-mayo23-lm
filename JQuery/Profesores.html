@@ -27,7 +27,7 @@
       <div class="container text-center">
           <div class="row">
               <div class="col">
-                  <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarModalAgregar()">Agregar Estudiante</a>
+                  <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarModalAgregar()">Agregar Profesor</a>
               </div>
               <div class="col">
                   <a name="RecargarTabla" id="RecargarTabla" class="btn btn-primary" href="#" role="button">Recargar tabla</a>
@@ -60,9 +60,9 @@
                     <th>Nombre</th>
                     <th>Apellido paterno</th>
                     <th>Apellido materno</th>
-                    <th>Nacionalidad</th>
                     <th>idCarreras</th>
                     <th>Usuario</th>
+                    <th>Nacionalidad</th>
                     <th>Acciones</th>
                   </tr>
       
@@ -77,7 +77,7 @@
 
       <!-- Modal agregar curso -->
 
-      <div class="modal fade" id="modalAgregarEstudiante" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+      <div class="modal fade" id="modalAgregarProfesor" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
           <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
               <div class="modal-content">
                   <div class="modal-header">
@@ -86,7 +86,7 @@
                   </div>
                   <div class="modal-body">
                       
-                      <form id="crearEstudiante">
+                      <form id="crearProfesor">
 
                         <div class="mb-3">
                             <label for="" class="form-label">Id</label>
@@ -155,19 +155,19 @@
                             <small id="helpId" class="form-text text-muted">Apellido materno</small>
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">Nacionalidad</label>
-                            <input required type="text"
-                                class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Ingresa su Nacionalidad">
-                            <small id="helpId" class="form-text text-muted">Nacionalidad</small>
-                        </div>
-                        <div class="mb-3">
                             <label for="" class="form-label">idCarreras</label>
                             <input required type="text"
-                                class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="Ingrese el id de Carrera">
-                            <small id="helpId" class="form-text text-muted">idCarreras</small>
+                                class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="Ingresa su Nacionalidad">
+                            <small id="helpId" class="form-text text-muted">IdCarreras</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">nacionalidad</label>
+                            <input required type="text"
+                                class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Ingrese el id de Carrera">
+                            <small id="helpId" class="form-text text-muted">nacionalidad</small>
                         </div>
                     
-                          <button id="crearEstudiante" class="btn btn-success">Agregar Estudiante</button>
+                          <button id="crearProfesor" class="btn btn-success">Agregar Profesor</button>
                 
                         </form>
 
@@ -177,7 +177,7 @@
       </div>
 
       <!-- Modal editar -->
-      <div class="modal fade" id="modalEditarEstudiante" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+      <div class="modal fade" id="modalEditarProfesor" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -186,21 +186,14 @@
             </div>
             <div class="modal-body">
             
-              <form id="editarEstudianteForm">
+              <form id="editarProfesorForm">
     
                 <div class="mb-3">
                   <label for="" class="form-label">ID</label>
                   <input disabled  type="text"
                     class="form-control" name="idEditar" id="idEditar" aria-describedby="helpId" placeholder="">
                   <small id="helpId" class="form-text text-muted"></small>
-                </div>
-      
-                <div class="mb-3">
-                    <label for="" class="form-label">Id</label>
-                    <input required type="text" disabled
-                        class="form-control" name="ideditar" id="ideditar" aria-describedby="helpId" placeholder="">
-                    <small id="helpId" class="form-text text-muted">Id</small>
-                </div>                    
+                </div>                  
                 <div class="mb-3">
                     <label for="" class="form-label">Cedula</label>
                     <input required type="number"
@@ -290,7 +283,7 @@
   </script>
 
       <!-- Modal eliminar -->
-      <div class="modal fade" id="modalEliminarEstudiante" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+      <div class="modal fade" id="modalEliminarProfesor" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -315,7 +308,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Se han actualizado los datos del estudiante
+          Se han actualizado los datos del profesor
         </div>
       </div>
     </div>
@@ -338,7 +331,7 @@
     </script>
 
     <script src="js/menu.js"></script>
-    <script src="js/Estudiantes.js"></script>
+    <script src="js/Profesores.js"></script>
 
   </body>
 
