@@ -97,6 +97,7 @@ $("#crearEstudiante").submit(function (e) {
     "telefono" : $('#telefono').val(), 
     "telefonocelular" : $('#telefonocelular').val(), 
     "fechanacimiento" : $('#fechanacimiento').val(),
+    "sexo" : $('#sexo').val(),
     "direccion" : $('#direccion').val(),
     "nombre" : $('#nombre').val(),
     "apellidopaterno" : $('#apellidopaterno').val(),
@@ -112,6 +113,7 @@ $("#crearEstudiante").submit(function (e) {
         data: JSON.stringify(datosEnviar),
         dataType: "json",
         success: function (response) {
+            console.log(datosEnviar)
             completeInsert();
         },
         error: function ( xhr, textStatus, errorThrown){
@@ -127,7 +129,7 @@ function completeInsert ()
     window.location = "Estudiantes.html";
 }
 
-//--------------------------------------------------------FUNCION EDITAR CURSO ------------------------------------------------------
+//Funcion Editar
 
 function editarEstudiante (id , cedula , correoelectronico , telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, idCarreras)
 {
@@ -146,8 +148,6 @@ $("#apellidomaternoeditar").val(apellidomaterno);
 $("#nacionalidadeditar").val(nacionalidad);
 $("#idCarreraseditar").val(idCarreras);
 
-
-
 modalEditarEstudiante.show();
 }
 
@@ -156,17 +156,18 @@ $("#editarEstudianteForm").submit(function (e) {
 
     let datosEnviar = 
     {
-        "cedula" : $('#cedula').val(), 
-        "correoelectronico" : $('#correoelectronico').val(), 
-        "telefono" : $('#telefono').val(), 
-        "telefonocelular" : $('#telefonocelular').val(), 
-        "fechanacimiento" : $('#fechanacimiento').val(),
-        "direccion" : $('#direccion').val(),
-        "nombre" : $('#nombre').val(),
-        "apellidopaterno" : $('#apellidopaterno').val(),
-        "apellidomaterno" : $('#apellidomaterno').val(),
-        "nacionalidad" : $('#nacionalidad').val(),
-        "idCarreras" : $('#idCarreras').val(),
+        "cedula" : $('#cedulaeditar').val(), 
+        "correoelectronico" : $('#correoelectronicoeditar').val(), 
+        "telefono" : $('#telefonoeditar').val(), 
+        "telefonocelular" : $('#telefonocelulareditar').val(), 
+        "fechanacimiento" : $('#fechanacimientoeditar').val(),
+        "sexo" : $('#sexoeditar').val(),
+        "direccion" : $('#direccioneditar').val(),
+        "nombre" : $('#nombreeditar').val(),
+        "apellidopaterno" : $('#apellidopaternoeditar').val(),
+        "apellidomaterno" : $('#apellidomaternoeditar').val(),
+        "nacionalidad" : $('#nacionalidadeditar').val(),
+        "idCarreras" : $('#idCarreraseditar').val(),
         "usuario" : "Brian Rivas",
     }
 
@@ -177,6 +178,7 @@ $("#editarEstudianteForm").submit(function (e) {
         dataType: "json",
         success: function (response) {
             modalEditarEstudiante.hide();
+            console.log(datosEnviar);
             editCompleto.show();
             RecargarTabla();
         }

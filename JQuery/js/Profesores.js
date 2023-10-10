@@ -97,6 +97,7 @@ $("#crearProfesor").submit(function (e) {
     "telefono" : $('#telefono').val(), 
     "telefonocelular" : $('#telefonocelular').val(), 
     "fechanacimiento" : $('#fechanacimiento').val(),
+    "sexo" : $('#sexo').val(),
     "direccion" : $('#direccion').val(),
     "nombre" : $('#nombre').val(),
     "apellidopaterno" : $('#apellidopaterno').val(),
@@ -129,7 +130,7 @@ function completeInsert ()
 
 //Funcion Editar
 
-function editarProfesor (id , cedula , correoelectronico , telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, idCarreras)
+function editarProfesor (id , cedula , correoelectronico , telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, idCarreras ,nacionalidad )
 {
 
 $("#idEditar").val(id);
@@ -156,17 +157,18 @@ $("#editarProfesorForm").submit(function (e) {
 
     let datosEnviar = 
     {
-        "cedula" : $('#cedula').val(), 
-        "correoelectronico" : $('#correoelectronico').val(), 
-        "telefono" : $('#telefono').val(), 
-        "telefonocelular" : $('#telefonocelular').val(), 
-        "fechanacimiento" : $('#fechanacimiento').val(),
-        "direccion" : $('#direccion').val(),
-        "nombre" : $('#nombre').val(),
-        "apellidopaterno" : $('#apellidopaterno').val(),
-        "apellidomaterno" : $('#apellidomaterno').val(),
-        "idCarreras" : $('#idCarreras').val(),
-        "nacionalidad" : $('#nacionalidad').val(),
+        "cedula" : $('#cedulaeditar').val(), 
+        "correoelectronico" : $('#correoelectronicoeditar').val(), 
+        "telefono" : $('#telefonoeditar').val(), 
+        "telefonocelular" : $('#telefonocelulareditar').val(), 
+        "fechanacimiento" : $('#fechanacimientoeditar').val(),
+        "sexo" : $('#sexoeditar').val(),
+        "direccion" : $('#direccioneditar').val(),
+        "nombre" : $('#nombreeditar').val(),
+        "apellidopaterno" : $('#apellidopaternoeditar').val(),
+        "apellidomaterno" : $('#apellidomaternoeditar').val(),
+        "idCarreras" : $('#idCarreraseditar').val(),
+        "nacionalidad" : $('#nacionalidadeditar').val(),
         "usuario" : "Brian Rivas",
     }
 
@@ -177,6 +179,7 @@ $("#editarProfesorForm").submit(function (e) {
         dataType: "json",
         success: function (response) {
             modalEditarProfesor.hide();
+            console.log(datosEnviar);
             editCompleto.show();
             RecargarTabla();
         }
