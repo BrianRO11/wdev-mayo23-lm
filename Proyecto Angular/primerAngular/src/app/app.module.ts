@@ -6,13 +6,12 @@ import { AppComponent } from './app.component';
 //se necesita el client http
 import { HttpClientModule } from '@angular/common/http';
 import { GrupoComponent } from './grupo/grupo.component';
-import { CursoComponent } from './curso/curso.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     GrupoComponent,
-    CursoComponent
   ],
   imports: [
     BrowserModule,
