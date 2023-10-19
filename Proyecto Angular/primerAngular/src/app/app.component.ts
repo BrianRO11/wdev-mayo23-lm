@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Cursos} from './models/cursos';
-import { RespuestaCursos } from './models/respuesta-cursos';
+import {Cursos} from './curso/models/cursos';
+import { RespuestaCursos } from './curso/models/respuesta-cursos';
 //import Importa librerias o clases
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
