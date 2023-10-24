@@ -27,7 +27,7 @@
     </div>
     <div class="container">
       <div class="container">
-        Mantenimiento de Grupos {{title}}
+        Mantenimiento de Estudiantes {{title}}
       </div>
       <div class="table-responsive">
         <table class="table table-striped
@@ -36,17 +36,42 @@
         table-primary
         align-middle">
           <thead class="table-light">
-            <caption>Cursos</caption>
+            <caption>Estudiantes</caption>
             <tr>
-              <th>Id</th>
-              <th>Nombre</th>
+                <th>Id</th>
+                <th>Cedula</th>
+                <th>Correo electronico</th>
+                <th>Telefono</th>
+                <th>Telefono celular</th>
+                <th>Fecha nacimiento</th>
+                <th>Sexo</th>
+                <th>Direccion</th>
+                <th>Nombre</th>
+                <th>Apellido paterno</th>
+                <th>Apellido materno</th>
+                <th>Nacionalidad</th>
+                <th>Id Carreras</th>
+                <th>Usuario</th>
+
             </tr>
             </thead>
             <tbody class="table-group-divider">
               <tr class="table-primary" *ngFor="let item of ArregloDatos">
   
                 <td scope="row">{{item.id}}</td>
-                <td>{{item.nombre}}</td>
+                <td>{{item.cedula }}</td>
+                <td>{{item.correoelectronico  }}</td>
+                <td>{{item.telefono }}</td>
+                <td>{{item.telefonocelular  }}</td>
+                <td>{{item.fechanacimiento  }}</td>
+                <td>{{item.sexo  }}</td>
+                <td>{{item.direccion  }}</td>
+                <td>{{item.nombre  }}</td>
+                <td>{{item.apellidopaterno  }}</td>
+                <td>{{item.apellidomaterno  }}</td>
+                <td>{{item.nacionalidad  }}</td>
+                <td>{{item.idCarreras  }}</td>
+                <td>{{item.usuario  }}</td>
               </tr>
             </tbody>
             <tfoot>
@@ -57,3 +82,9 @@
       
     </div>
   </div>
+
+
+  <!-- //{"id":"","cedula":"","correoelectronico":
+  ,"telefono":,"telefonocelular":,"fechanacimiento":,"sexo":,"direccion":
+  ","nombre":,"apellidopaterno":,"apellidomaterno":","nacionalidad"
+  :,"idCarreras":,"usuario"} -->
