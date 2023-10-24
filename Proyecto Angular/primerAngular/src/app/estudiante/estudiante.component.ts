@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Estudiantes } from './models/estudiantes';
 import { EstudianteResponse } from './models/estudiante-response';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-estudiante',
