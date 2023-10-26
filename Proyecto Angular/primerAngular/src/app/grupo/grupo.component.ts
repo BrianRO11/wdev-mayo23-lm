@@ -12,6 +12,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class GrupoComponent implements OnInit {
   title = 'primerAngular'
 
+  pestanaActiva: string = 'pestana2';
+  cambiarPestana(pestana: string){
+    this.pestanaActiva = pestana;
+  } 
+
   ArregloDatos: Grupos [] = [];
   
   constructor (private http: HttpClient) {}

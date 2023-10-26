@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Estudiantes } from './models/estudiantes';
-import { EstudianteResponse } from './models/estudiante-response';
+import { Profesor } from './models/profesor';
+import { ProfesorResponse } from './models/profesor-response';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-@Component({
-  selector: 'app-estudiante',
-  templateUrl: './estudiante.component.html',
-  styleUrls: ['./estudiante.component.css']
-})
 
-export class EstudianteComponent implements OnInit {
+@Component({
+  selector: 'app-profesores',
+  templateUrl: './profesores.component.html',
+  styleUrls: ['./profesores.component.css']
+})
+export class ProfesoresComponent implements OnInit{
   title = 'primerAngular';
 
-  pestanaActiva: string = 'pestana3';
+  pestanaActiva: string = 'pestana4';
   cambiarPestana(pestana: string){
     this.pestanaActiva = pestana;
   } 
 
-  ArregloDatos: Estudiantes [] = [];
+  ArregloDatos: Profesor [] = [];
 
   constructor (private http: HttpClient) {}
   
@@ -26,9 +26,9 @@ export class EstudianteComponent implements OnInit {
   }
 
   obtenerDatos(){
-    const url = "https://paginas-web-cr.com/ApiPHP/apis/ListaEstudiantes.php";
+    const url = "https://paginas-web-cr.com/ApiPHP/apis/ListaProfesores.php";
 
-    this.http.get<EstudianteResponse>(url).subscribe(
+    this.http.get<ProfesorResponse>(url).subscribe(
       (response) => {
       this.ArregloDatos = response.data;
       console.log(response.data);

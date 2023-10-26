@@ -5,4 +5,3 @@ export class Cursos {
     tiempo: string= "";
     usuario: string= "";
 }
-

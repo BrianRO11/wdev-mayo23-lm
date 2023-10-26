@@ -11,6 +11,11 @@ import { Curso } from './models/curso';
 export class CursoComponent implements OnInit{
   title = 'primerAngular';
 
+  pestanaActiva: string = 'pestana1';
+  cambiarPestana(pestana: string){
+    this.pestanaActiva = pestana;
+  }
+
   ArregloDatos: Curso [] = [];
 
   constructor (private http: HttpClient) {}
