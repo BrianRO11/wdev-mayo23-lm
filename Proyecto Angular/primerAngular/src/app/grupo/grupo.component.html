@@ -1,6 +1,4 @@
-<div class="container">
-
-    <div class="container">
+    <div class="container-fluid">
       <div class="container">
         Mantenimiento de Grupos {{title}}
       </div>
@@ -10,15 +8,16 @@
         table-borderless
         table-primary
         align-middle">
-          <thead class="table-light">
+          <thead class="table-dark">
             <caption>Cursos</caption>
             <tr>
               <th>Id</th>
               <th>Nombre</th>
+              <th>Acciones</th>
             </tr>
             </thead>
             <tbody class="table-group-divider">
-              <tr class="table-primary" *ngFor="let item of ArregloDatos">
+              <tr class="table-light" *ngFor="let item of ArregloDatos">
   
                 <td scope="row">{{item.id}}</td>
                 <td>{{item.nombre}}</td>
@@ -31,4 +30,3 @@
       </div>
       
     </div>
-  </div>

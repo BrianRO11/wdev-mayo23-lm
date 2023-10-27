@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs" >
+  <ul class="nav nav-tabs justify-content-center nav-justified" >
     <li class="nav-item">
       <a class="nav-link" [class.active]="pestanaActiva === 'pestana1'" (click)="cambiarPestana('pestana1')" >Cursos</a>
     </li>
@@ -23,13 +23,12 @@
     </div>
     <div *ngIf="pestanaActiva === 'pestana2'" >
       <app-grupo></app-grupo>
-  </div>    
+    </div>    
     <div *ngIf="pestanaActiva === 'pestana3'" >
       <app-estudiante></app-estudiante>
-  </div>    
-  <div *ngIf="pestanaActiva === 'pestana4'" >
-    <app-profesores></app-profesores>
-</div>    
-
+    </div>    
+    <div *ngIf="pestanaActiva === 'pestana4'" >
+      <app-profesores></app-profesores>
+    </div>    
   </div>
 </div>

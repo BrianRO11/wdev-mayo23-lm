@@ -1,6 +1,4 @@
-<div class="container">
-
-    <div class="container">
+    <div class="container-fluid">
       <div class="container">
         Mantenimiento de Profesores {{title}}
       </div>
@@ -10,7 +8,7 @@
         table-borderless
         table-primary
         align-middle">
-          <thead class="table-light">
+          <thead class="table-dark">
             <caption>Profesores</caption>
             <tr>
                 <th>Id</th>
@@ -27,11 +25,12 @@
                 <th>Id Carreras</th>
                 <th>Usuario</th>
                 <th>Nacionalidad</th>
+                <th>Acciones</th>
 
             </tr>
             </thead>
             <tbody class="table-group-divider">
-              <tr class="table-primary" *ngFor="let item of ArregloDatos">
+              <tr class="table-light" *ngFor="let item of ArregloDatos">
   
                 <td scope="row">{{item.id}}</td>
                 <td>{{item.cedula }}</td>
@@ -56,7 +55,6 @@
       </div>
       
     </div>
-  </div>
 
 
   <!-- //{"id":"","cedula":"","correoelectronico":
