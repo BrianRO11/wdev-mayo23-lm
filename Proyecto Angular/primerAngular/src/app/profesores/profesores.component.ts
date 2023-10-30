@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./profesores.component.css']
 })
 export class ProfesoresComponent implements OnInit{
-  title = 'primerAngular';
+  title = 'Primer Angular';
 
   pestanaActiva: string = 'pestana4';
   cambiarPestana(pestana: string){

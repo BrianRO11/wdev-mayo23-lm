@@ -11,7 +11,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   //Atributos
-  title = 'primerAngular';
+  title = 'Primer Angular';
 
   pestanaActiva: string = 'pestana1';
   cambiarPestana(pestana: string){

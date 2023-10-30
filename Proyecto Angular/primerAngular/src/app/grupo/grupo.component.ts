@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 
 export class GrupoComponent implements OnInit {
-  title = 'primerAngular'
+  title = 'Primer Angular'
 
   pestanaActiva: string = 'pestana2';
   cambiarPestana(pestana: string){

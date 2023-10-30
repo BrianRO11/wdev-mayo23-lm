@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 
 export class EstudianteComponent implements OnInit {
-  title = 'primerAngular';
+  title = 'Primer Angular';
 
   pestanaActiva: string = 'pestana3';
   cambiarPestana(pestana: string){

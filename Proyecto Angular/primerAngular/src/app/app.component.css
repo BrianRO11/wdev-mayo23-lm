@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+.nav-tabs .nav-item .nav-link {
+    color: #FFF;
+    padding: 15px;
+    font-family:'Segoe UI';
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.main-nav {
+    background-image: url(https://media.istockphoto.com/id/1341408852/video/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke.jpg?s=640x640&k=20&c=v2DQUY8IVbli_6FH_9KAs6YWRXlDdYiBJHfp7JFh7NY=);
+    background-color: rgba(0, 0, 0, .6);
+    background-blend-mode: multiply;
+    background-size: cover;
+}

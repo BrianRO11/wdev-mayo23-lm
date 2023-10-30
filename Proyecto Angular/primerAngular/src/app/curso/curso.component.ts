@@ -9,7 +9,7 @@ import { Curso } from './models/curso';
   styleUrls: ['./curso.component.css']
 })
 export class CursoComponent implements OnInit{
-  title = 'primerAngular';
+  title = 'Primer Angular';
 
   pestanaActiva: string = 'pestana1';
   cambiarPestana(pestana: string){
