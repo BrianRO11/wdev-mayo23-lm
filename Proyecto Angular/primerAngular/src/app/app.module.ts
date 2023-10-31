@@ -10,6 +10,7 @@ import { GrupoComponent } from './grupo/grupo.component';
 import { EstudianteComponent } from './estudiante/estudiante.component';
 import { CursoComponent } from './curso/curso.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProfesoresComponent } from './profesores/profesores.component';
     GrupoComponent,
     EstudianteComponent,
     CursoComponent,
-    ProfesoresComponent
+    ProfesoresComponent,
+    UsuariosComponent
     
   ],
   imports: [

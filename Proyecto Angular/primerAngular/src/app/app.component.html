@@ -13,7 +13,9 @@
     <li class="nav-item">
       <a class="nav-link" [class.active]="pestanaActiva === 'pestana4'" (click)="cambiarPestana('pestana4')" >PROFESORES</a>
     </li>
-
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="pestanaActiva === 'pestana5'" (click)="cambiarPestana('pestana5')" >USUARIOS</a>
+    </li>
   </ul>
   
   <!-- Tab panes -->
@@ -30,5 +32,8 @@
     <div *ngIf="pestanaActiva === 'pestana4'" >
       <app-profesores></app-profesores>
     </div>    
+    <div *ngIf="pestanaActiva === 'pestana5'" >
+      <app-usuarios></app-usuarios>
+    </div> 
   </div>
 </div>
