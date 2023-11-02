@@ -1,8 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Estudiantes</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
 
     <div class="container-fluid">
       <div class="container title">
         Mantenimiento de Estudiantes {{title}}
       </div>
+
+      <div class="container">
+        <h2>Mantenimiento de Datos</h2>
+        <form action="">
+          <div class="mb-3">
+            <label for="" class="form-label">Cedula</label>
+            <input type="number" [(ngModel)]="modeloEst.cedula"
+              class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="cedula">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Correo Electronico</label>
+            <input type="email" [(ngModel)]="modeloEst.correoelectronico"
+              class="form-control" name="correoelectronico" id="correoelectronico" aria-describedby="helpId" placeholder="correo electronico">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Telefono</label>
+            <input type="number" [(ngModel)]="modeloEst.telefono"
+              class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="telefono">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3"> 
+            <label for="" class="form-label">Telefono Celular</label>
+            <input type="number" [(ngModel)]="modeloEst.telefonocelular"
+              class="form-control" name="telefonocelular" id="telefonocelular" aria-describedby="helpId" placeholder="telefono celular">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Fecha Nacimiento</label>
+            <input type="date" [(ngModel)]="modeloEst.fechanacimiento"
+              class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="fechanacimiento">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Sexo</label>
+            <input type="text" [(ngModel)]="modeloEst.sexo"
+              class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="sexo">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Direccion</label>
+            <input type="text" [(ngModel)]="modeloEst.direccion"
+              class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="direccion">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Nombre</label>
+            <input type="text" [(ngModel)]="modeloEst.nombre"
+              class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Apellido Paterno</label>
+            <input type="text" [(ngModel)]="modeloEst.apellidopaterno"
+              class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="apellido paterno">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Apellido Materno</label>
+            <input type="text" [(ngModel)]="modeloEst.apellidomaterno"
+              class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="apellido materno">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Nacionalidad</label>
+            <input type="text" [(ngModel)]="modeloEst.nacionalidad"
+              class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="nacionalidad">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">id Carreras</label>
+            <input type="number" [(ngModel)]="modeloEst.idCarreras"
+              class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="id Carreras">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-grid gap-2">
+              <button (click)="addAndEdit()" type="button" name="" id="" class="btn btn-primary">Guardar</button>
+            
+              <button type="reset" class="btn btn-danger">Reset</button>
+            </div>
+          </div>
+    
+        </form>
+      </div>
+
+
+
+      <hr>
       <div class="table-responsive">
         <table class="table table-striped
         table-hover	
@@ -58,7 +169,19 @@
     </div>
 
 
-  <!-- //{"id":"","cedula":"","correoelectronico":
-  ,"telefono":,"telefonocelular":,"fechanacimiento":,"sexo":,"direccion":
-  ","nombre":,"apellidopaterno":,"apellidomaterno":","nacionalidad"
-  :,"idCarreras":,"usuario"} -->
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

@@ -11,6 +11,7 @@ import { EstudianteComponent } from './estudiante/estudiante.component';
 import { CursoComponent } from './curso/curso.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],
