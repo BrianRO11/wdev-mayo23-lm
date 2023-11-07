@@ -15,7 +15,6 @@ export class UsuariosComponent implements OnInit{
 
   addAndEdit(){
     this.enviarSolicitudPost();
-    console.log("Hola")
   }
 
   pestanaActiva: string = 'pestana5';
