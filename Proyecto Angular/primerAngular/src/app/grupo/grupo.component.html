@@ -28,7 +28,7 @@
       
     <form action="">
       <label for="" class="form-label">{{id}}</label>
- 
+
       <div class="mb-3 ">
         <label for="" class="form-label">Nombre</label>
         <input type="text" [(ngModel)]="modeloGrupo.nombre"
@@ -39,7 +39,7 @@
         <div class="d-grid gap-2">
           <button (click)="addAndEdit()" type="button" name="" id="" class="btn btn-primary">{{textoBoton}}</button>
         
-          <button type="reset" class="btn btn-danger">Reset</button>
+          <button (click)="limpiar()" type="reset" class="btn btn-danger">Reset</button>
         </div>
       </div>
     </form>
@@ -57,7 +57,6 @@
             <tr>
               <th>Id</th>
               <th>Nombre</th>
-              <th>Acciones</th>
             </tr>
             </thead>
             <tbody class="table-group-divider">
