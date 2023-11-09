@@ -28,6 +28,12 @@
       
     <form action="">
       <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" [(ngModel)]="modeloGrupo.id"
+          class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Id" disabled>
+        <small id="helpId" class="form-text text-muted">Id del Grupo</small>
+      </div>
+      <div class="mb-3">
         <label for="" class="form-label">Nombre</label>
         <input type="text" [(ngModel)]="modeloGrupo.nombre"
           class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
@@ -35,7 +41,7 @@
       </div>
       <div class="mb-3">
         <div class="d-grid gap-2">
-          <button (click)="addAndEdit()" type="button" name="" id="" class="btn btn-primary">Guardar</button>
+          <button (click)="addAndEdit()" type="button" name="" id="" class="btn btn-primary">{{textoBoton}}</button>
         
           <button type="reset" class="btn btn-danger">Reset</button>
         </div>
@@ -59,7 +65,7 @@
             </tr>
             </thead>
             <tbody class="table-group-divider">
-              <tr class="table-light" *ngFor="let item of ArregloDatos">
+              <tr class="table-light" *ngFor="let item of ArregloDatos" (click)="cargaredicion(item)">
   
                 <td scope="row">{{item.id}}</td>
                 <td>{{item.nombre}}</td>
