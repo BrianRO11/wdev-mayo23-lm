@@ -13,6 +13,7 @@ import { Curso } from '../curso/models/curso';
 export class GrupoComponent implements OnInit {
   title = 'Primer Angular'
   textoBoton = "Guardar";
+  id = "";
 
   modeloGrupo: Grupos = new Grupos ();
 
@@ -31,12 +32,14 @@ export class GrupoComponent implements OnInit {
   cargaredicion(item: Grupos){
     this.modeloGrupo = item;
     console.log(item);
-    this.textoBoton = "Modificar"
+    this.textoBoton = "Modificar";
+    this.id = "id: " + this.modeloGrupo.id;
   }
 
   limpiar(){
     this.modeloGrupo = new Grupos();
-    this.textoBoton = "Guardar"
+    this.textoBoton = "Guardar";
+    this.id = "" ;
   }
 
   pestanaActiva: string = 'pestana2';

@@ -27,13 +27,9 @@
       <h2>Mantenimiento de Datos</h2>
       
     <form action="">
-      <div class="mb-3">
-        <label for="" class="form-label">Id</label>
-        <input type="text" [(ngModel)]="modeloGrupo.id"
-          class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Id" disabled>
-        <small id="helpId" class="form-text text-muted">Id del Grupo</small>
-      </div>
-      <div class="mb-3">
+      <label for="" class="form-label">{{id}}</label>
+ 
+      <div class="mb-3 ">
         <label for="" class="form-label">Nombre</label>
         <input type="text" [(ngModel)]="modeloGrupo.nombre"
           class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
