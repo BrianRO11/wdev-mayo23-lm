@@ -11,6 +11,7 @@ import { Curso } from './models/curso';
 export class CursoComponent implements OnInit{
   title = 'Primer Angular';
   textoBoton = "Guardar";
+  id = "";
 
   selectedCursos: Curso = new Curso ();
   selectedCurso: Curso = {
@@ -39,11 +40,13 @@ export class CursoComponent implements OnInit{
     this.modeloCurso = item;
     console.log(item);
     this.textoBoton = "Modificar";
+    this.id = "id: " + this.modeloCurso.id;
   }
 
   limpiar(){
     this.modeloCurso = new Curso();
     this.textoBoton = "Guardar";
+    this.id
   }
 
   pestanaActiva: string = 'pestana1';
