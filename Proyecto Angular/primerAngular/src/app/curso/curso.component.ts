@@ -43,6 +43,11 @@ export class CursoComponent implements OnInit{
     this.id = "id: " + this.modeloCurso.id;
   }
 
+  eliminar(item: Curso){
+    this.modeloCurso = item;
+    this.enviarSolicitudPostEliminar();
+  }
+
   limpiar(){
     this.modeloCurso = new Curso();
     this.textoBoton = "Guardar";
@@ -77,7 +82,36 @@ export class CursoComponent implements OnInit{
 
   }
 
-  
+    enviarSolicitudPostEliminar(){
+    const url = 'https://paginas-web-cr.com/ApiPHP/borrar.php';
+    
+    // Datos que deseas enviar en la solicitud POST
+    const data = {
+      id: this.modeloCurso.id,
+
+      // Agrega más datos según tus necesidades
+    };
+
+    // Configura las cabeceras para la solicitud POST
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json' // Ajusta el tipo de contenido según el requerimiento de la API
+    });
+
+    // Realiza la solicitud POST
+    this.http.post(url, this.modeloCurso, { headers }).subscribe(
+      (response) => {
+        // Maneja la respuesta de la API
+        console.log('Respuesta de la API:', response);
+        this.obtenerDatos();
+      },
+      (error) => {
+        // Maneja los errores de la solicitud
+        console.error('Error:', error);
+      }
+    );
+
+  }
+
 
   enviarSolicitudPostEdit(){
     const url = 'https://paginas-web-cr.com/ApiPHP/apis/ActualizarCursos.php';

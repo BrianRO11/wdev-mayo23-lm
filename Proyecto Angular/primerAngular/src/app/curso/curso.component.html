@@ -79,6 +79,7 @@
               <th>Descripcion</th>
               <th>Tiempo </th>
               <th>Usuario</th>
+              <th>Accion</th>
             </tr>
             </thead>
             <tbody class="table-group-divider">
@@ -88,6 +89,9 @@
                 <td>{{item.descripcion}}</td>
                 <td>{{item.tiempo}}</td>
                 <td>{{item.usuario}}</td>
+                <td>
+                  <button (click)="eliminar(item)" type="button" class="btn btn-danger">Eliminar</button>
+                </td>
               </tr>
             </tbody>
             <tfoot>
