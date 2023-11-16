@@ -83,7 +83,7 @@ export class CursoComponent implements OnInit{
   }
 
     enviarSolicitudPostEliminar(){
-    const url = 'https://paginas-web-cr.com/ApiPHP/borrar.php';
+    const url = 'https://paginas-web-cr.com/ApiPHP/apis/BorrarCursos.php';
     
     // Datos que deseas enviar en la solicitud POST
     const data = {
@@ -98,7 +98,7 @@ export class CursoComponent implements OnInit{
     });
 
     // Realiza la solicitud POST
-    this.http.post(url, this.modeloCurso, { headers }).subscribe(
+    this.http.post(url, data, { headers }).subscribe(
       (response) => {
         // Maneja la respuesta de la API
         console.log('Respuesta de la API:', response);
@@ -118,8 +118,9 @@ export class CursoComponent implements OnInit{
     
     // Datos que deseas enviar en la solicitud POST
     const data = {
-      parametro1: 'valor1',
-      parametro2: 'valor2'
+      id: 'valor1',
+      nombre: 'valor2',
+      tiempo: 'valor3'
       // Agrega más datos según tus necesidades
     };
 

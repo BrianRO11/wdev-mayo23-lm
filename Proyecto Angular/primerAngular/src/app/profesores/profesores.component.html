@@ -26,83 +26,91 @@
       <div class="container">
         <h2>Mantenimiento de Datos</h2>
         <form action="">
+          <label for="" class="form-label">{{id}}</label> 
+          
           <div class="mb-3">
             <label for="" class="form-label">Cedula</label>
             <input type="text" [(ngModel)]="modeloProf.cedula"
-              class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="cedula">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Ingrese el numero de cedula">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
           <div class="mb-3">
             <label for="" class="form-label">Correo Electronico</label>
             <input type="email" [(ngModel)]="modeloProf.correoelectronico"
-              class="form-control" name="correoelectronico" id="correoelectronico" aria-describedby="helpId" placeholder="correo electronico">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="correoelectronico" id="correoelectronico" aria-describedby="helpId" placeholder="Ingrese el correo electronico">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
-          <div class="mb-3">
+        <div class="row g-3">
+          <div class="col-sm mb-3">
             <label for="" class="form-label">Telefono</label>
             <input type="number" [(ngModel)]="modeloProf.telefono"
-              class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="telefono">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="Ingrese el numero de telefono">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
-          <div class="mb-3"> 
+          <div class="col-sm mb-3"> 
             <label for="" class="form-label">Telefono Celular</label>
             <input type="number" [(ngModel)]="modeloProf.telefonocelular"
-              class="form-control" name="telefonocelular" id="telefonocelular" aria-describedby="helpId" placeholder="telefono celular">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="telefonocelular" id="telefonocelular" aria-describedby="helpId" placeholder="Ingrese el numero de telefono celular">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
-          <div class="mb-3">
+        </div>
+        <div class="row g-3">
+          <div class="col-sm mb-3">
             <label for="" class="form-label">Fecha Nacimiento</label>
             <input type="date" [(ngModel)]="modeloProf.fechanacimiento"
-              class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="fechanacimiento">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="Ingrese la fecha de nacimiento">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
-          <div class="mb-3">
+          <div class="col-sm mb-3">
             <label for="" class="form-label">Sexo</label>
             <input type="text" [(ngModel)]="modeloProf.sexo"
-              class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="sexo">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="Ingrese el sexo">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
+        </div>
           <div class="mb-3">
             <label for="" class="form-label">Direccion</label>
             <input type="text" [(ngModel)]="modeloProf.direccion"
-              class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="direccion">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="Ingrese la direccion">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
-          <div class="mb-3">
+        <div class="row g-3">
+          <div class="col-sm mb-3">
             <label for="" class="form-label">Nombre</label>
             <input type="text" [(ngModel)]="modeloProf.nombre"
-              class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
-          <div class="mb-3">
+          <div class="col-sm mb-3">
             <label for="" class="form-label">Apellido Paterno</label>
             <input type="text" [(ngModel)]="modeloProf.apellidopaterno"
-              class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="apellido paterno">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="Ingrese el apellido paterno">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
-          <div class="mb-3">
+          <div class="col-sm mb-3">
             <label for="" class="form-label">Apellido Materno</label>
             <input type="text" [(ngModel)]="modeloProf.apellidomaterno"
-              class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="apellido materno">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="Ingrese el apellido materno">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
+        </div>
           <div class="mb-3">
             <label for="" class="form-label">id Carreras</label>
             <input type="number" [(ngModel)]="modeloProf.idCarreras"
-              class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="id Carreras">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="Ingrese el id de Carreras">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
           <div class="mb-3">
             <label for="" class="form-label">Nacionalidad</label>
             <input type="text" [(ngModel)]="modeloProf.nacionalidad"
-              class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="nacionalidad">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+              class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Ingrese la nacionalidad">
+            <small id="helpId" class="form-text text-muted"></small>
           </div>
           <div class="mb-3">
             <div class="d-grid gap-2">
               <button (click)="addAndEdit()" type="button" name="" id="" class="btn btn-primary">{{textoBoton}}</button>
             
-              <button type="reset" class="btn btn-danger">Reset</button>
+              <button (click)="limpiar()" type="reset" class="btn btn-danger">Reset</button>
             </div>
           </div>
     
@@ -110,7 +118,7 @@
       </div>
 
       <hr>
-      <div class="table-responsive">
+      <div class="table-responsive-small">
         <table class="table table-striped
         table-hover	
         table-borderless
@@ -133,6 +141,7 @@
                 <th>Id Carreras</th>
                 <th>Usuario</th>
                 <th>Nacionalidad</th>
+                <th>Accion</th>
             </tr>
             </thead>
             <tbody class="table-group-divider">
@@ -152,6 +161,9 @@
                 <td>{{item.idCarreras  }}</td>
                 <td>{{item.usuario  }}</td>
                 <td>{{item.nacionalidad  }}</td>
+                <td>
+                  <button (click)="eliminar(item)" type="button" class="btn btn-danger">Eliminar</button>
+                </td>
               </tr>
             </tbody>
             <tfoot>

@@ -12,6 +12,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ProfesoresComponent implements OnInit{
   title = 'Primer Angular';
   textoBoton = "Guardar"
+  id = "";
   modeloProf: Profesor = new Profesor ();
 
   addAndEdit(){
@@ -31,11 +32,18 @@ export class ProfesoresComponent implements OnInit{
     this.modeloProf = item;
     console.log(item);
     this.textoBoton = "Modificar";
+    this.id = "id: " + this.modeloProf.id;
+  }
+
+  eliminar(item: Profesor){
+    this.modeloProf = item;
+    this.enviarSolicitudPostEliminar();
   }
 
   limpiar(){
     this.modeloProf = new Profesor();
     this.textoBoton = "Guardar"
+    this.id;
   }
 
   pestanaActiva: string = 'pestana4';
@@ -64,6 +72,36 @@ export class ProfesoresComponent implements OnInit{
     }
     )
   }
+
+  enviarSolicitudPostEliminar(){
+    const url = 'https://paginas-web-cr.com/ApiPHP/apis/BorrarProfesores.php';
+    
+    // Datos que deseas enviar en la solicitud POST
+    const data = {
+      id: this.modeloProf.id,
+      // Agrega más datos según tus necesidades
+    };
+
+    // Configura las cabeceras para la solicitud POST
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json' // Ajusta el tipo de contenido según el requerimiento de la API
+    });
+
+    // Realiza la solicitud POST
+    this.http.post(url, data, { headers }).subscribe(
+      (response) => {
+        // Maneja la respuesta de la API
+        console.log('Respuesta de la API:', response);
+        this.obtenerDatos();
+      },
+      (error) => {
+        // Maneja los errores de la solicitud
+        console.error('Error:', error);
+      }
+    );
+
+  }
+
 
   enviarSolicitudPostEdit(){
     const url = 'https://paginas-web-cr.com/ApiPHP/apis/ActualizarProfesores.php';

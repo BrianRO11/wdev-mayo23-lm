@@ -47,7 +47,7 @@
 
           <div class="mb-3">
             <div class="d-grid gap-2">
-              <button (click)="addAndEdit()" type="button" name="" id="" class="btn btn-primary">Guardar</button>
+              <button (click)="addAndEdit()" type="button" name="" id="" class="btn btn-primary">{{textoBoton}}</button>
             
               <button type="reset" class="btn btn-danger">Reset</button>
             </div>
@@ -68,11 +68,10 @@
               <th>Nombre</th>
               <th>Correo Electronico</th>
               <th>Contraseña </th>
-              <th>Acciones</th>
             </tr>
             </thead>
             <tbody class="table-group-divider">
-              <tr class="table-light" *ngFor="let item of ArregloDatos">
+              <tr class="table-light" *ngFor="let item of ArregloDatos" (click)="cargaredicion(item)">
                 <td scope="row">{{item.id}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.email}}</td>

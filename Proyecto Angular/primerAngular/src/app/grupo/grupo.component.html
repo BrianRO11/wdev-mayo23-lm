@@ -32,8 +32,8 @@
       <div class="mb-3 ">
         <label for="" class="form-label">Nombre</label>
         <input type="text" [(ngModel)]="modeloGrupo.nombre"
-          class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
-        <small id="helpId" class="form-text text-muted">Ingrese nombre del Grupo</small>
+          class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre del grupo">
+        <small id="helpId" class="form-text text-muted"></small>
       </div>
       <div class="mb-3">
         <div class="d-grid gap-2">
@@ -53,10 +53,11 @@
         table-primary
         align-middle">
           <thead class="table-dark">
-            <caption>Cursos</caption>
+            <caption>Grupos</caption>
             <tr>
               <th>Id</th>
               <th>Nombre</th>
+              <th>Accion</th>
             </tr>
             </thead>
             <tbody class="table-group-divider">
@@ -64,6 +65,9 @@
   
                 <td scope="row">{{item.id}}</td>
                 <td>{{item.nombre}}</td>
+                <td>
+                  <button (click)="eliminar(item)" type="button" class="btn btn-danger">Eliminar</button>
+                </td>
               </tr>
             </tbody>
             <tfoot>
