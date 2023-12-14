@@ -1,27 +1,25 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <FormularioBienvenida></FormularioBienvenida>
-  <SaludarAlPublico 
-  nombrePersona='Brian Rivas' 
-  lugarClase="Frontend Developer" 
-  horarioClase="Lunes Noche"></SaludarAlPublico>
-  <SaludarAlPublico 
-  nombrePersona='German Ariza' 
-  lugarClase="Python" 
-  horarioClase="Miercoles Noche"></SaludarAlPublico>
+  <h2>Haciendo una calculadora con v-model</h2>
+  <CalculadoraBasica></CalculadoraBasica>
+  <h2>Llenando etiquetas con V-For</h2>
+  <LlenandoEtiquetas></LlenandoEtiquetas>
 </template>
 
 <script>
 
 import FormularioBienvenida from './components/FormularioBienvenida.vue';
-import SaludarAlPublico from './components/SaludarAlPublico.vue';
+import CalculadoraBasica from './components/CalculadoraBasica.vue';
+import LlenandoEtiquetas from './components/LlenandoEtiquetas.vue';
 
 export default {
   name: 'App',
   components: 
   {
     FormularioBienvenida,
-    SaludarAlPublico
+    CalculadoraBasica,
+    LlenandoEtiquetas
   }
 }
 </script>

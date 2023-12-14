@@ -2,23 +2,20 @@
     <div class="container">
         <h1>Solicitando datos</h1>
         <p>Digite su nombre</p>
-        <input class="form-control" id="textoNombre">
+        <input class="form-control" v-model="nombrePersona">
         <br>
-        <button id="botonNombre" class="btn btn-primary"
-            @click="VerNombre">Mostrar nombre</button>
+        <button class="btn btn-primary">Mostrar nombre</button>
         <br>
-        <h3></h3>
+        <h3>{{ nombrePersona }}</h3>
     </div>
 </template>
 
 <script>
 export default {
-    methods: 
+    data()
     {
-        VerNombre()
-        {
-            var nombre = document.getElementById("textoNombre").value;
-            alert("El nombre es: " + nombre)
+        return{
+            nombrePersona: ''
         }
     }
 }
