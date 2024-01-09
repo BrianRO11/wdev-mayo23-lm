@@ -2,7 +2,7 @@
     <div class="container">
         <h1>Solicitando datos</h1>
         <p>Digite su nombre</p>
-        <input class="form-control" v-model="nombrePersona">
+        <input class="form-control" v-model="nombrePersona" v-on:keyup="Letra presionada">
         <br>
         <button class="btn btn-primary">Mostrar nombre</button>
         <br>
