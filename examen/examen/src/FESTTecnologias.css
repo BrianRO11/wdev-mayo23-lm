@@ -1,0 +1,16 @@
+.contenedorTecnologias{
+    position: relative;
+    top: 100px;
+    width: 120px;
+    height: 75px;
+    padding: 2px;
+}
+
+.contenedorTecnologias img{
+    width: 70px;
+    height: 70px;
+}
+
+.contenedorTecnologias h1{
+        font-size: 60%;
+}
