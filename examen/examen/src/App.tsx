@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
+import GoogleResena from './Reseña';
+import GoogleTecnologias from './Tecnologias';
+import GoogleBeneficios from './Beneficios';
+import GoogleFormulario from './Formulario';
+import GoogleTestimonio from './Testimonio';
 import './App.css';
 import './Testimonio.css';
-import GoogleResena from './Reseña';
-import GoogleBeneficios from './Beneficios';
-import GoogleTestimonio from './Testimonio';
-import GoogleTecnologias from './Tecnologias';
-import GoogleFormulario from './Formulario';
 
 function App() {
   return (
@@ -49,10 +49,12 @@ function App() {
           nombre="Google Assistant"
         imagen='GAssistant'></GoogleTecnologias>
         </div>
+
         <GoogleTestimonio
+          
+          cargo = "Ingeniero de Software Senior"
           nombre = "John Doe"
           edad ={35}
-          cargo = "Ingeniero de Software Senior"
           imagen = 'John Doe'
           testimonio='Trabajar en Google ha sido una experiencia increíble. La cultura de la empresa fomenta la innovación y la colaboración, lo que nos permite crear productos que impactan a millones de personas en todo el mundo. Además, las oportunidades de crecimiento profesional son abundantes y el ambiente de trabajo es muy positivo.'
         ></GoogleTestimonio>

@@ -1,6 +1,7 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Tecnologias.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 interface PropsTechnologias{
     nombre : string,

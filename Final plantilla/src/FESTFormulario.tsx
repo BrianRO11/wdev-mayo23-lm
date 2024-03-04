@@ -1,46 +1,48 @@
 import React, { useState } from "react";
+import '../src/FESTFormulario.css';
+import { Button, Table } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
-import { Button } from "react-bootstrap";
-import './Formulario.css'
 
-const GoogleFormulario : React.FC = () =>{
+const FESTFormulario : React.FC = () =>{
 
-    const [contador, setContador] = useState(50);
-    const [coment, setComent] = useState("");
+    const [comentario, setComentario] = useState("");
     const [aviso, setAviso] = useState("comentario");
+    const [contador, setContador] = useState(50);
+    const [deshabilitar, setDeshabilitar] = useState(false);
 
-
-    const LimiteComent = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+    const LimiteComentario = (e: { target: { value: React.SetStateAction<string>; }; }) => {
         setContador(contador - 1);
-        setComent(e.target.value);
+        setComentario(e.target.value);
 
+        if(contador === 1){
+            setDeshabilitar(true);
+        }
+        else{
+            setDeshabilitar(false);
+        }
 
-        if(coment.length > 49){
+        if(comentario.length > 49){
             setAviso("rojo");
         }
-        else if(coment.length < 49){            
+        else if(comentario.length < 49){            
         setAviso("comentario");       
         }
     }
 
     return (
         <div className="contenedorFormulario">
-            <h1>Ingrese sus datos personales:</h1>
+            <h1>Digite sus datos personales:</h1>
             <Form>
                 <Form.Label className="label">Nombre</Form.Label>
                 <Form.Control required className="form" placeholder="Nombre Completo"></Form.Control>
-                
                 <Form.Label className="label">Correo</Form.Label>
                 <Form.Control required className="form" placeholder="Correo"></Form.Control>
-                
                 <Form.Label className="label">Teléfono</Form.Label>
                 <Form.Control required className="form" placeholder="Teléfono"></Form.Control>
-                
                 <Form.Label className="label">Comentario</Form.Label>
                 <div className="comentarios">
-                
                 <Form.Label className="label">Caracteres: {contador}</Form.Label>
-                <textarea required id="comentarioID" value={coment} onChange={LimiteComent} className= {aviso} ></textarea> 
+                <textarea required disabled = {deshabilitar} id="comentarioID" value={comentario} onChange={LimiteComentario} className= {aviso} ></textarea> 
                 </div>            
                 <Button type="submit" className="botonEnviar" >Enviar</Button>
             </Form>
@@ -49,4 +51,4 @@ const GoogleFormulario : React.FC = () =>{
     );
 }
 
-export default GoogleFormulario;
+export default FESTFormulario;
