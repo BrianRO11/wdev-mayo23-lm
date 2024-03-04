@@ -1,5 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Testimonio.css'
 
 interface TestimonioProps{
     nombre : string,
@@ -9,7 +10,7 @@ interface TestimonioProps{
     testimonio : string
 }
 
-const FESTTestimonio : React.FC<TestimonioProps> = (props) =>{
+const GoogleTestimonio : React.FC<TestimonioProps> = (props) =>{
 
 
     return(
@@ -23,4 +24,4 @@ const FESTTestimonio : React.FC<TestimonioProps> = (props) =>{
             </div>
         )  
 }
-export default FESTTestimonio;
+export default GoogleTestimonio;

@@ -1,13 +1,13 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../src/FESTTecnologias.css';
+import "./Tecnologias.css"
 
-interface TechnologiasProps{
+interface PropsTechnologias{
     nombre : string,
     imagen : string
 }
 
-const FESTTecnologias : React.FC <TechnologiasProps>= (props) => {
+const GoogleTecnologias : React.FC <PropsTechnologias>= (props) => {
     return(
         <div className="contenedorTecnologias">
             <h1 className="imagenTecnologias">{props.nombre}</h1>
@@ -17,4 +17,4 @@ const FESTTecnologias : React.FC <TechnologiasProps>= (props) => {
     );
 }
 
-export default FESTTecnologias;
+export default GoogleTecnologias;

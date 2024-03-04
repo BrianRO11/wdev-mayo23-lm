@@ -1,7 +1,7 @@
 import React from "react";
-import './FESTBeneficios.css';
+import './Beneficios.css'
 
-const FESTBeneficios : React.FC = () =>{
+const GoogleBeneficios : React.FC = () =>{
     return (
         <div className="contenedorBeneficios">
             <div className="textoBeneficios">
@@ -29,4 +29,4 @@ const FESTBeneficios : React.FC = () =>{
     );
 }
 
-export default FESTBeneficios;
+export default GoogleBeneficios;

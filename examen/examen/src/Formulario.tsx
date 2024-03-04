@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import '../src/FESTFormulario.css';
 import { Button, Table } from "react-bootstrap";
+import './Formulario.css'
 import Form from 'react-bootstrap/Form';
 
-const FESTFormulario : React.FC = () =>{
+const GoogleFormulario : React.FC = () =>{
 
     const [comentario, setComentario] = useState("");
     const [aviso, setAviso] = useState("comentario");
@@ -51,4 +51,4 @@ const FESTFormulario : React.FC = () =>{
     );
 }
 
-export default FESTFormulario;
+export default GoogleFormulario;
