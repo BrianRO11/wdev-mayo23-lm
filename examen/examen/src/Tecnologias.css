@@ -1,8 +1,11 @@
 .contenedorTecnologias{
+    background-color: lightgray;
+    box-shadow: 30px;
     position: relative;
-    top: 100px;
+    top: 50px;
     width: 120px;
-    height: 75px;
+    height: 120px;
+    margin: 10px 10px 50px;
     padding: 2px;
 }
 
@@ -13,4 +16,5 @@
 
 .contenedorTecnologias h1{
         font-size: 60%;
+        color: #333 ;
 }

@@ -14,12 +14,12 @@ const GoogleTestimonio : React.FC<TestimonioProps> = (props) =>{
 
 
     return(
-            <div className="contenedorTestimonio">
-                <img className="imagenTestimonio" src={require(`../src/img/${props.imagen}.jpg`)}></img>
-                <div className="contenedorTextoTestimonio">
-                    <p className="nombreTestimonio"> {props.nombre} - {props.edad}</p>
-                    <p className="cargoTestimonio">{props.cargo}</p>
-                    <p className="textoTestimonio">{props.testimonio}</p>
+            <div className="TestContenedor">
+                <img className="TestImagen" src={require(`../src/img/${props.imagen}.jpg`)}></img>
+                <div className="TestContenedorTexto">
+                    <p className="TestNombre"> {props.nombre} - {props.edad}</p>
+                    <p className="TestCargo">{props.cargo}</p>
+                    <p className="TestTexto">{props.testimonio}</p>
                 </div>
             </div>
         )  

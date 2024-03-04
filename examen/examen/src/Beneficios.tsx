@@ -3,25 +3,22 @@ import './Beneficios.css'
 
 const GoogleBeneficios : React.FC = () =>{
     return (
-        <div className="contenedorBeneficios">
-            <div className="textoBeneficios">
-                <h1>Beneficios al adquirir los servicios de FEST</h1>
+        <div className="Bcontenedor">
+            <div className="Btexto">
+                <h1>Beneficios que ofrece Google a la sociedad</h1>
                 <p>
-                1 Mejora de la Experiencia del Usuario: Nuestros servicios de Front End están diseñados para mejorar la experiencia del usuario, lo que resulta en una navegación más intuitiva y agradable en tu sitio web o aplicación.<br></br>
+                1 Acceso a la información: Google ha democratizado el acceso a la información al permitir a las personas buscar y encontrar información en línea de manera rápida y eficiente. 
 
-                2 Optimización para Múltiples Dispositivos: Nuestros expertos en Front End aseguran que tu plataforma sea completamente receptiva, garantizando una experiencia consistente en todos los dispositivos, desde computadoras de escritorio hasta dispositivos móviles y tabletas.<br></br>
+                2 Herramientas de productividad: Google ofrece una variedad de herramientas de productividad gratuitas, como Google Docs, Sheets y Slides, que permiten a las personas colaborar y trabajar juntas de manera eficiente.<br></br>
 
-                3 Mayor Interactividad: Implementamos elementos interactivos y dinámicos para involucrar a tus usuarios de manera más efectiva, lo que resulta en una mayor retención y participación.<br></br>
+                3 Plataforma de publicidad: Google Ads proporciona una plataforma de publicidad en línea que permite a las empresas llegar a su audiencia objetivo de manera efectiva y medir el rendimiento de sus campañas publicitarias.<br></br>
 
-                4 Optimización de Velocidad y Rendimiento: Mejoramos el rendimiento de tu sitio web o aplicación, optimizando la velocidad de carga y la eficiencia del Front End, lo que se traduce en una experiencia más fluida para tus usuarios.<br></br>
+                4 Mapas y navegación: Google Maps ofrece una herramienta de navegación y mapas en línea que ayuda a las personas a encontrar direcciones, explorar lugares y planificar rutas de viaje.<br></br>
 
-                5 Compatibilidad con Estándares Web Actuales: Nos aseguramos de que tu plataforma cumpla con los estándares web actuales, incluidos HTML5, CSS3 y JavaScript, para garantizar la compatibilidad con los navegadores más recientes y futuros.<br></br>
+                5 Educación: Google ofrece una variedad de herramientas educativas gratuitas, como Google Classroom, que ayudan a los educadores a enseñar y a los estudiantes a aprender de manera más efectiva.<br></br>
 
-                6 Facilidad de Mantenimiento y Escalabilidad: Desarrollamos soluciones Front End sólidas y modularizadas que son fáciles de mantener y escalar, lo que te permite adaptarte rápidamente a los cambios en el mercado y las necesidades de tu negocio.<br></br>
-
-                7 Cumplimiento de Estándares de Accesibilidad: Nos aseguramos de que tu plataforma sea accesible para todos los usuarios, cumpliendo con los estándares de accesibilidad web y garantizando una experiencia inclusiva para personas con discapacidades.<br></br>
-
-                8 Soporte Continuo y Actualizaciones: Ofrecemos soporte continuo y actualizaciones periódicas para garantizar que tu plataforma Front End esté siempre al día con las últimas tecnologías y tendencias de diseño.
+                6 Innovación tecnológica: Google ha sido pionero en una serie de tecnologías innovadoras, como el motor de búsqueda, el sistema operativo Android, el navegador Chrome, la inteligencia artificial y la computación en la nube.<br></br>
+                
                 </p>
 
             </div>

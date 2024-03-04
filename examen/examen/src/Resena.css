@@ -1,27 +1,26 @@
-.contenedorResena{
-        position: relative;
-        top: 5px;
-        width: 120vh;
-        height: 100%;
-        margin: 20px 0 20px;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .textoResena h1{
-        padding: 15px;
-        margin: 0 0 10px;
-        font-size: 30px;
-        color: #ffffff;
-        text-align: justify;
-    }
-
-    .textoResena{
-        font-size: 20px;
-        color: #ffffff;
-        text-align: justify;
-    }
-    
-   
+.Rcontenedor {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .Rtexto {
+    color: #333;
+  }
+  
+  .Rtexto h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+  }
+  
+  
+  .Rtexto p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
