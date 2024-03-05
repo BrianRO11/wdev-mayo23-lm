@@ -1,25 +1,23 @@
 import React, { useState } from "react";
-import Form from 'react-bootstrap/Form';
-import { Button } from "react-bootstrap";
-import './Formulario.css'
+import './Formulario.css';
+import { Button, Form } from "react-bootstrap";
 
-const GoogleFormulario : React.FC = () =>{
-
-    const [contador, setContador] = useState(50);
-    const [coment, setComent] = useState("");
+const GoogleFormulario: React.FC = () => {
+    const [comentario, setComentario] = useState("");
     const [aviso, setAviso] = useState("comentario");
+    const [deshabilitar, setDeshabilitar] = useState(false);
+    const [contador, setContador] = useState(50);
 
+    const limiteComentario = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const textoComentario = e.target.value;
+        setComentario(textoComentario);
+        setContador(50 - textoComentario.length);
+        setDeshabilitar(textoComentario.length === 50);
 
-    const LimiteComent = (e: { target: { value: React.SetStateAction<string>; }; }) => {
-        setContador(contador - 1);
-        setComent(e.target.value);
-
-
-        if(coment.length > 49){
+        if (textoComentario.length > 49) {
             setAviso("rojo");
-        }
-        else if(coment.length < 49){            
-        setAviso("comentario");       
+        } else {
+            setAviso("comentario");
         }
     }
 
@@ -27,24 +25,32 @@ const GoogleFormulario : React.FC = () =>{
         <div className="contenedorFormulario">
             <h1>Ingrese sus datos personales:</h1>
             <Form>
-                <Form.Label className="label">Nombre</Form.Label>
-                <Form.Control required className="form" placeholder="Nombre Completo"></Form.Control>
-                
-                <Form.Label className="label">Correo</Form.Label>
-                <Form.Control required className="form" placeholder="Correo"></Form.Control>
-                
-                <Form.Label className="label">Teléfono</Form.Label>
-                <Form.Control required className="form" placeholder="Teléfono"></Form.Control>
-                
-                <Form.Label className="label">Comentario</Form.Label>
-                <div className="comentarios">
-                
-                <Form.Label className="label">Caracteres: {contador}</Form.Label>
-                <textarea required id="comentarioID" value={coment} onChange={LimiteComent} className= {aviso} ></textarea> 
-                </div>            
-                <Button type="submit" className="botonEnviar" >Enviar</Button>
+                <Form.Group controlId="formNombre">
+                    <Form.Label>Nombre</Form.Label>
+                    <Form.Control type="text" placeholder="Nombre Completo" required />
+                </Form.Group>
+
+                <Form.Group controlId="formCorreo">
+                    <Form.Label>Correo</Form.Label>
+                    <Form.Control type="email" placeholder="Correo" required />
+                </Form.Group>
+
+                <Form.Group controlId="formTelefono">
+                    <Form.Label>Teléfono</Form.Label>
+                    <Form.Control type="tel" placeholder="Teléfono" required />
+                </Form.Group>
+
+                <Form.Group controlId="formComentario">
+                    <Form.Label>Comentario</Form.Label>
+                    <div className="comentarios">
+                        <Form.Label>Caracteres restantes: {contador}</Form.Label>
+                        <Form.Control required as="textarea" rows={3} value={comentario} onChange={limiteComentario} className={aviso} disabled={deshabilitar}
+                        />
+                    </div>
+                </Form.Group>
+
+                <Button type="submit" className="botonEnviar">Enviar</Button>
             </Form>
-            
         </div>
     );
 }

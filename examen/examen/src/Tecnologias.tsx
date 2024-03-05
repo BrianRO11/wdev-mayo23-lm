@@ -3,16 +3,16 @@ import "./Tecnologias.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-interface PropsTechnologias{
+interface PropsTech{
     nombre : string,
     imagen : string
 }
 
-const GoogleTecnologias : React.FC <PropsTechnologias>= (props) => {
+const GoogleTecnologias : React.FC <PropsTech>= (props) => {
     return(
         <div className="contenedorTecnologias" >
-            <h1>{props.nombre}</h1>
             <img src={require(`../src/img/${props.imagen}.png`)}></img>
+            <h1>{props.nombre}</h1>
         </div>
         
     );

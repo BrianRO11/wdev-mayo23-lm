@@ -1,15 +1,20 @@
 import React from "react";
-import './Resena.css'
- 
-const GoogleResena = () => {
-    return(
+import './Resena.css';
+
+interface ResenaProps {
+    titulo: string;
+    contenido: string;
+}
+
+const GoogleResena: React.FC<ResenaProps> = ({ titulo, contenido }) => {
+    return (
         <div className="Rcontenedor">
             <div className="Rtexto">
-                <h1>Google</h1>                
-                <p> Google LLC es una empresa de tecnología multinacional estadounidense que se centra en inteligencia artificial, publicidad en línea, tecnología de motores de búsqueda, computación en la nube, software, computación cuántica, comercio electrónico y electrónica de consumo.</p>
+                <h1>{titulo}</h1>
+                <p>{contenido}</p>
             </div>
-           </div>
+        </div>
     );
 }
 
-export default  GoogleResena;
+export default GoogleResena;

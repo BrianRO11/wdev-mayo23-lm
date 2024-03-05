@@ -2,23 +2,24 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Testimonio.css'
 
-interface TestimonioProps{
+interface TestProps{
     nombre : string,
-    edad : number,
+    edad : number, 
     cargo : string,
     imagen : string,
     testimonio : string
 }
 
-const GoogleTestimonio : React.FC<TestimonioProps> = (props) =>{
+const GoogleTestimonio : React.FC<TestProps> = (props) =>{
 
 
     return(
             <div className="TestContenedor">
                 <img className="TestImagen" src={require(`../src/img/${props.imagen}.jpg`)}></img>
                 <div className="TestContenedorTexto">
-                    <p className="TestNombre"> {props.nombre} - {props.edad}</p>
-                    <p className="TestCargo">{props.cargo}</p>
+                    <h2 className="TestCargo">{props.cargo}</h2>
+                    <h1 className="TestNombre"> {props.nombre}</h1>
+                    <h2 className="TestEdad"> {props.edad}</h2>
                     <p className="TestTexto">{props.testimonio}</p>
                 </div>
             </div>
