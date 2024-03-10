@@ -1,25 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <FormularioBienvenida></FormularioBienvenida>
-  <h2>Haciendo una calculadora con v-model</h2>
-  <CalculadoraBasica></CalculadoraBasica>
-  <h2>Llenando etiquetas con V-For</h2>
-  <LlenandoEtiquetas></LlenandoEtiquetas>
+  <CalculadoraDePropina></CalculadoraDePropina>
+  
 </template>
 
 <script>
 
-import FormularioBienvenida from './components/FormularioBienvenida.vue';
-import CalculadoraBasica from './components/CalculadoraBasica.vue';
-import LlenandoEtiquetas from './components/LlenandoEtiquetas.vue';
+import CalculadoraDePropina from './components/CalculadoraDePropina.vue';
 
 export default {
   name: 'App',
   components: 
   {
-    FormularioBienvenida,
-    CalculadoraBasica,
-    LlenandoEtiquetas
+    CalculadoraDePropina,
   }
 }
 </script>

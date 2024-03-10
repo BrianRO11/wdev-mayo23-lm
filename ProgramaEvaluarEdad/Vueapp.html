@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Propina</title>
+  <!-- Vue.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app" style="text-align: center; padding-top: 20px;">
+    <h1>Calculadora de Propina</h1>
+    <div>
+      <label for="total">Monto Total:</label>
+      <input type="number" id="total" v-model.number="total">
+    </div>
+    <div>
+      <button v-for="tip in tips" :key="tip" @click="calculateTip(tip)">
+        {{ tip }}%
+      </button>
+    </div>
+    <div v-if="tipAmount !== null">
+      <p>El monto total con {{ selectedTip }}% de propina es: {{ totalWithTip }}</p>
+    </div>
+    <button @click="reset">Reiniciar</button>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        total: null,
+        selectedTip: null,
+        tipAmount: null,
+        tips: [3, 5, 7, 10, 13]
+      },
+      methods: {
+        calculateTip(tip) {
+          if (this.total !== null) {
+            this.selectedTip = tip;
+            this.tipAmount = (this.total * tip) / 100;
+          }
+        },
+        reset() {
+          this.total = null;
+          this.selectedTip = null;
+          this.tipAmount = null;
+        }
+      },
+      computed: {
+        totalWithTip() {
+          return (this.total !== null && this.tipAmount !== null) ? (this.total + this.tipAmount).toFixed(2) : null;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
